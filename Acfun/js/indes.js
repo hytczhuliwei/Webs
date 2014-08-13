@@ -13,35 +13,54 @@ $(function(){
 		$(".history").mouseover(function(){
 			$("#guide_historyArea").show();
 		});
-	},function(){
-		$(this).css({"height":""});
 		$(".history").mouseout(function(){
 			$("#guide_historyArea").hide();
 		});
+	},function(){
+		$(this).css({"height":""});
+		
 	});
 	$("#guide_post").hover(function(){
 		$(this).css({"height":"70px"});
 		$(".post").mouseover(function(){
 			$("#guide_postArea").show();
 		});
-	},function(){
-		$(this).css({"height":""});
 		$(".post").mouseout(function(){
 			$("#guide_postArea").hide();
 		});
+	},function(){
+		$(this).css({"height":""});
+		
 	});
 	$("#guide_avatarArea").hover(function(){
 		$(this).css({"height":"70px"});
 		$(".avatar").mouseover(function(){
 			$("#guide_userAva").show();
 		});
-	},function(){
-		$(this).css({"height":""});
 		$(".avatar").mouseout(function(){
 			$("#guide_userAva").hide();
 		});
+	},function(){
+		$(this).css({"height":""});
+		
 	});
 	
+	//导航栏
+	$(".navWords").hover(function(){
+		var curClassName="."+$(this).attr("class").split("navWords ")[1];
+		$(curClassName).mouseover(function(){
+			$("#sub-guideMengban").slideDown();
+			$(curClassName).slideDown();
+		});
+	//}
+	},function(){
+
+	});
+
+
+
+
+
 
 	$(".tab").click(function(){
 		$(this).parent().find(".tab").attr("class","tab");
