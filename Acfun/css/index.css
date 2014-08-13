@@ -106,32 +106,56 @@ background-color: rgba(0, 0, 0, 0);cursor: pointer; float: left;width: 14px; hei
 .personInfoRight .guide_desc{line-height: 22px; cursor: pointer;}
 
 /*导航栏*/
-#nav{width: 980px; height: 38px; margin: auto;}
+#nav{width: 980px; height: 38px; margin: auto; position: relative;}
 #navLeft{width: 710px;height: 38px; float: left;}
 #navRight{width: 112px; height: 38px;float: right;}
 #sub-guide{display: block; transition: .2s 0s all ease;width: 100%;height: 2px;background: #fff url("images/border.png") center top repeat-x;padding-top: 2px;
 line-height: 35px;font-size: 13px;overflow: visible;position: relative;}
-.sub-guideshow{}
-#sub-guideMengban{display: none; width: 100%; margin-top: 3px; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;transition: .2s 0s all ease;border-bottom:1px solid #fff;position:absolute;top: 0; left: 0; background-color: #fff; height: 37px;}
+#sub-guideMengban{display: none; width: 100%; margin-top: 3px; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+transition: .2s 0s all ease;border-bottom:1px solid #fff;position:absolute;top: 0; left: 0; background-color: #fff; height: 37px;}
 .c1{color: #FF9101;}
 .c2{color: #E84C3D;}
 .c3{color: #E04270;}
-.c4{color: #1FA4C7;}
+.c4{color:#1FA4C7;}
 .c5{color: #58BBB8;}
 .c6{color: #95BE3E;}
-.navWords{width: auto;min-width: 28px; height:38px;position: relative; float: left;transition: .2s 0s all ease;padding: 0 16px;position: relative;height: 38px;line-height: 38px;font-size: 14px;}
-.firstNav{padding: 0 16px 0 0;width: 28px;height:38px;position: relative; float: left;height: 38px;line-height: 38px;font-size: 14px;}
+.navWords{width: auto;min-width: 28px; height:38px;position: relative;display: inline-block; float: left;transition: .2s 0s all ease;padding: 0 16px;position: relative;height: 38px;line-height: 38px;font-size: 14px;}
+.firstNav{color: #1FA4C7; padding: 0 16px 0 0;width: 28px;height:38px;position: relative; float: left;height: 38px;line-height: 38px;font-size: 14px;}
 .zhibo{width: 28px; height:38px; float: left;padding: 0 16px;height: 38px;line-height: 38px;font-size: 14px;}
+.zhibo:hover{color: #58BBB8;}
 .phoneIcon{background-position: -172px -64px; float: left; width: 16px; height: 17px;margin:10px 4px 0 0;}
 .guide_appWords{color: #777;margin: 10px 8px 0 0;font-size: 12px;height: 17px;line-height: 17px;float: left;}
 
 .sub-guideInner{ width: 980px; height: 37px; margin: auto; position: relative;  background-color: #fff;}
-.channel-anime{ display: none; width: auto; max-width: 980px; height: 35px; position: absolute; left: 0;top: 0;}
-.sub-guideInner .navWords{padding: 0 4px 0 4px; margin-right: 12px; text-align: center; font-size: 13px; height: 35px;}
-.sub-guideInner .navWords:hover{border-bottom: 3px solid #ff9101}
-.shuxian{color: #ccc;width: 4px; float: left; margin-right: 12px;}
- .channel-anime .specialNavWords{color: #1fa4c7; }
+
+
+#navLeft .channel .navWords{padding: 0 4px 0 4px; margin-right: 12px; text-align: center; font-size: 13px; height: 35px;}
+#navLeft .channel .navWords:hover{border-bottom: 3px solid #ff9101}
+.shuxian{color: #ccc;width: 4px; float: left; margin-right: 12px;  line-height: 38px;}
+
+.channel{display: none; width: auto; max-width: 980px; height: 35px; position: absolute; z-index: 100; background-color: #fff;}
+.anime{left: 0;top: 41px;}
+.music{left: 0;top: 41px;}
+.game{left: 57px;top: 41px;}
+.joy{left: 135px;top: 41px;}
+.science{left: 217px;top: 41px;}
+.physical{left: 290px;top: 41px;}
+.film{left: 309px;top: 41px;}
+.artical{left: 370px;top: 41px;}
+.sumspecial{left: 461px;top: 41px;}
+.more{left: 595px;top: 41px;}
+.anime .specialNavWords{color: #1fa4c7; }
 .anime .tail{left: 65px;top: -10px; background-position:-144px -113px;}
+.music .tail{left: 125px;top: -10px; background-position:-160px -113px;}
+.game .tail{left: 125px;top: -10px; background-position:-80px -113px;}
+.joy .tail{left: 110px;top: -10px; background-position:-96px -113px;}
+.science .tail{left: 90px;top: -10px; background-position:-96px -113px;}
+.physical .tail{left: 75px;top: -10px; background-position:-112px -113px;}
+.film .tail{left: 120px;top: -10px; background-position:-128px -113px;}
+.artical .tail{left: 120px;top: -10px; background-position:-144px -113px;}
+.sumspecial .tail{left: 90px;top: -10px; background-position:-144px -113px;}
+.more .tail{left: 70px;top: -10px; background-position:-80px -113px;}
+
 
 
 /*专题导航，国产动画区*/
@@ -259,10 +283,6 @@ background-position: -15px -296px; color: #fff;-webkit-transition:all 0s ease 0.
 .wenzhangActive{width: 2px; height: 20px; background-color: #ff9101; float: left; display: block;}
 
 
-/*/=测试旋转*/
-.test{width:100px; height:100px; border:1px solid #ccc; }
-.test i{width: 10px;height: 10px;display: block; transition:0.2s ease-out;background-image: url("images/20131224174700_CXfn4.png"); background-repeat: no-repeat; boder:1px solid #111;}
-.test:hover i{transform:rotateZ(-180deg);}
 
 
 /*影视，科技，追剧*/

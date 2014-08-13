@@ -46,15 +46,27 @@ $(function(){
 	});
 	
 	//导航栏
-	$(".navWords").hover(function(){
-		var curClassName="."+$(this).attr("class").split("navWords ")[1];
-		$(curClassName).mouseover(function(){
-			$("#sub-guideMengban").slideDown();
-			$(curClassName).slideDown();
-		});
-	//}
+	$(".navA").hover(function(){
+		var curShowNav=$(this).find(".channel").attr("class").split("channel ")[1];
+		if(curShowNav=="anime" || curShowNav=="artical" || curShowNav=="sumspecial"){
+			$(this).find(".largeNav").css({"color":"#1FA4C7"});		
+		}else if(curShowNav=="music"){
+			$(this).find(".largeNav").css({"color":"#58BBB8"});	
+		}else if(curShowNav=="game" || curShowNav=="more" ){
+			$(this).find(".largeNav").css({"color":"#95BE3E"});	
+		}else if(curShowNav=="joy" || curShowNav=="science" ){
+			$(this).find(".largeNav").css({"color":"#FF9101"});
+		}else if(curShowNav=="physical"){
+			$(this).find(".largeNav").css({"color":"#E84C3D"});	
+		}else if(curShowNav=="film"){
+			$(this).find(".largeNav").css({"color":"#E04270"});	
+		}
+		$("#sub-guideMengban").stop(true,false).delay(100).slideDown();
+		$(this).find(".channel").stop(true,false).delay(200).show(100);	
 	},function(){
-
+		$(this).find(".channel").stop(true,false).delay(200).hide();
+		$("#sub-guideMengban").stop(true,false).slideUp(300);
+		$(this).find(".largeNav").css({"color":""});	
 	});
 
 
