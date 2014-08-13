@@ -31,7 +31,7 @@ text-indent: -9999px;background: url("images/sprite-index.png") -63px -169px no-
 .videoBox{width: 131px; height: 114px; float: left;padding: 0 6px 0 0; margin: 0 0 0 0; position: relative;}
 .videoPic{width: 122px;height: 70px; display: block; position: relative;}
 .preview{border:1px solid #fff;transition: box-shadow .2s ease; width:122px; height:70px; display: block;box-shadow: 0 1px 3px rgba(0,0,0,0.3);background-color: #eee; }
-.videoTitle{width: 122px; height: 24px; overflow: hidden; padding:8px 0 0 0;color: #333;text-decoration: none;text-shadow: rgba(0, 0, 0, 0.0980392);transition: color .2s ease; line-height: 16px;word-break: break-all;}
+.videoTitle{width: 122px; height: 16px; overflow: hidden; padding:8px 0 0 0;color: #333;text-decoration: none;text-shadow: rgba(0, 0, 0, 0.0980392);transition: color .2s ease; line-height: 16px;word-break: break-all;}
 .videoTitle:hover{color:#e04270;}
 .videoBoxLast{padding: 0 0 0 0; float: right;}
 .videoTitleLast{padding-left:8px; float: left;}
@@ -145,6 +145,16 @@ transition: .2s 0s all ease;border-bottom:1px solid #fff;position:absolute;top: 
 .sumspecial{left: 461px;top: 41px;}
 .more{left: 595px;top: 41px;}
 .anime .specialNavWords{color: #1fa4c7; }
+.music .specialNavWords{color: #58bbb8; }
+.game .specialNavWords{color: #95be3e; }
+.joy .specialNavWords{color: #ff9101; }
+.science .specialNavWords{color: #ff9101; }
+.physical .specialNavWords{color: #e84c3d; }
+.film .specialNavWords{color: #e04270 }
+.artical .specialNavWords{color: #1fa4c7; }
+.sumspecial .specialNavWords{color: #1fa4c7; }
+.more .specialNavWords{color: #1fa4c7; }
+
 .anime .tail{left: 65px;top: -10px; background-position:-144px -113px;}
 .music .tail{left: 125px;top: -10px; background-position:-160px -113px;}
 .game .tail{left: 125px;top: -10px; background-position:-80px -113px;}
@@ -240,6 +250,20 @@ background-position: -15px -296px; color: #fff;-webkit-transition:all 0s ease 0.
 .xinfan{height: 399px;}
 #dongman .left .lanmu2 .lmTitle .rightTitleBg{width: 42px;background-position: -15px -56px;}
 #xinfanArea .rightTitle .rightTitleBg{width: 124px;background-position: -63px -56px;}
+
+.xinfan{position: relative;}
+.xfUpdate{height: 28px;line-height: 28px; margin: 0 0 4px 0; position: relative; text-align: left;}
+.bianxian{width: 15px; height: 415px;position: absolute; z-index: -1; top: 0;  background: url("images/sprite-index.png") left bottom no-repeat;}
+.xfUpdateLeft{width: 60px; height: 28px; float: left;}
+.xfUpdateRight{width: 210px; height: 24px;position: absolute; top: 0;right: 0; border-bottom: 1px dashed #ccc; float: right; overflow: hidden;}
+.xfUpdateTool{width: 24px; height: 196px; top: 0; display: none; position: absolute; right: 0; top: 0;}
+.weekStyle{display: block;background: url("images/sprite-index.png") no-repeat;background-position: -232px -367px;color: #666;border: none;border-radius: 1px;width: 44px;height: 27px;line-height: 22px;
+margin: 0 0 0 10px;text-align: center;cursor: pointer; }
+.xfTitle{display: block;height: 24px;line-height: 24px;overflow: hidden;text-shadow: 0 1px 1px rgba(0,0,0,0.1);}
+.xfTitle:hover{color: #e04270;}
+.btn-scroll{width: 24px; height: 24px; z-index: 3; border-radius: 50%; border: 1px solid #ddd;background-color: #fff; text-align: center; cursor: pointer; position: absolute;bottom: 4px;}
+.scrollbtnicon{width: 12px;height: 12px;color: #333;outline-color: #333; display: block; background-image: url("images/icon-grey.png"); background-repeat: no-repeat; background-position: -313px -119px; margin:6px;}
+.quanbuxinfan{width:210px;height: auto; position: absolute; right: 0; top: 0; }
 
 /*游戏区*/
 #youxi{height: 352px; width: 980px; margin: auto}
