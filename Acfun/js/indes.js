@@ -6,6 +6,20 @@ $(function(){
 	$(".searchButton").mouseup(function(){
 		 $(this).css({"background-position":"0 -88px"});		
 	});
+	//显示回到顶栏
+	$(window).scroll(function(){
+		var m=$(window).height();
+		var n=$(this).scrollTop();
+		if(m<n){
+			$("#toTopContainer").fadeIn(700);
+		}else{
+			$("#toTopContainer").fadeOut(700);
+		}
+	});
+	$(".toTop").click(function(){
+		$('body,html').animate({scrollTop:0},1000);
+		return false;
+	});
 
 	//弹出浏览信息，投稿，个人信息等
 	$("#guide_history").hover(function(){
@@ -46,31 +60,100 @@ $(function(){
 	});
 	
 	//导航栏
-	$(".navA").hover(function(){
-		var curShowNav=$(this).find(".channel").attr("class").split("channel ")[1];
-		$("#sub-guideMengban").stop(true,true).slideDown();
-		$(this).find(".channel").stop(true,true).show();	
-		if(curShowNav=="anime" || curShowNav=="artical" || curShowNav=="sumspecial"){
-			$(this).find(".largeNav").css({"color":"#1FA4C7"});		
-		}else if(curShowNav=="music"){
-			$(this).find(".largeNav").css({"color":"#58BBB8"});	
-		}else if(curShowNav=="game" || curShowNav=="more" ){
-			$(this).find(".largeNav").css({"color":"#95BE3E"});	
-		}else if(curShowNav=="joy" || curShowNav=="science" ){
-			$(this).find(".largeNav").css({"color":"#FF9101"});
-		}else if(curShowNav=="physical"){
-			$(this).find(".largeNav").css({"color":"#E84C3D"});	
-		}else if(curShowNav=="film"){
-			$(this).find(".largeNav").css({"color":"#E04270"});	
-		}
-	},function(){
-		$(this).find(".channel").stop(true,false).hide();
-		$("#sub-guideMengban").stop(true,false).slideUp(300);
-		$(this).find(".largeNav").css({"color":""});	
+	// $(".navA").hover(function(){
+	// 	var curShowNav=$(this).find(".channel").attr("class").split("channel ")[1];
+	// 	$("#sub-guideMengban").stop(true,true).slideDown();
+	// 	$(this).find(".channel").stop(true,true).show();	
+	// 	if(curShowNav=="anime" || curShowNav=="artical" || curShowNav=="sumspecial"){
+	// 		$(this).find(".largeNav").css({"color":"#1FA4C7"});		
+	// 	}else if(curShowNav=="music"){
+	// 		$(this).find(".largeNav").css({"color":"#58BBB8"});	
+	// 	}else if(curShowNav=="game" || curShowNav=="more" ){
+	// 		$(this).find(".largeNav").css({"color":"#95BE3E"});	
+	// 	}else if(curShowNav=="joy" || curShowNav=="science" ){
+	// 		$(this).find(".largeNav").css({"color":"#FF9101"});
+	// 	}else if(curShowNav=="physical"){
+	// 		$(this).find(".largeNav").css({"color":"#E84C3D"});	
+	// 	}else if(curShowNav=="film"){
+	// 		$(this).find(".largeNav").css({"color":"#E04270"});	
+	// 	}
+	// },function(){
+	// 	$(this).find(".channel").stop(true,false).hide();
+	// 	$("#sub-guideMengban").stop(true,false).slideUp(300);
+	// 	$(this).find(".largeNav").css({"color":""});	
+	// });
+
+	$("#navLeft .navA").each(function(){
+	    var that = $(this);
+	        that.hoverDelay({
+            outDuring: 400,
+            hoverEvent: function(){
+               	var curShowNav=that.find(".channel").attr("class").split("channel ")[1];
+				//$("#sub-guideMengban").stop(true,false).slideDown(200);
+				that.find(".channel").stop(true,false).show(500);	
+				if(curShowNav=="anime" || curShowNav=="artical" || curShowNav=="sumspecial"){
+					that.find(".largeNav").css({"color":"#1FA4C7"});		
+				}else if(curShowNav=="music"){
+					that.find(".largeNav").css({"color":"#58BBB8"});	
+				}else if(curShowNav=="game" || curShowNav=="more" ){
+					that.find(".largeNav").css({"color":"#95BE3E"});	
+				}else if(curShowNav=="joy" || curShowNav=="science" ){
+					that.find(".largeNav").css({"color":"#FF9101"});
+				}else if(curShowNav=="physical"){
+					that.find(".largeNav").css({"color":"#E84C3D"});	
+				}else if(curShowNav=="film"){
+					that.find(".largeNav").css({"color":"#E04270"});	
+				}       
+            },
+            outEvent: function(){
+               that.find(".channel").stop(true,false).hide(100);
+				//$("#sub-guideMengban").stop(true,false).slideUp(500);
+				that.find(".largeNav").css({"color":""});
+            }
+        });
+	});
+	$("#navLeft").each(function(){
+  		  var that = $(this);
+	        that.hoverDelay({
+            outDuring: 600,
+            hoverEvent: function(){
+				$("#sub-guideMengban").stop(true,false).slideDown(200);     
+            },
+            outEvent: function(){
+				$("#sub-guideMengban").stop(true,false).slideUp(500);
+            }
+        });
 	});
 
-
-
+		//更换专题图片
+	timeHandle=setInterval("lightboxShow()",2000);
+	$(".lightboxLeftTag").hover(function(){
+		clearInterval(timeHandle);
+		clearTimeout(timeHandle2);
+		$(".lightboxGuide").stop(true,false);
+		picNum=$(this).attr("class").split("unit-")[1];
+		timeHandle2=setTimeout("lightboxShow()",500);
+		$(".lightboxGuide").mouseout(function(){
+			clearInterval(timeHandle);
+			clearTimeout(timeHandle2);
+			timeHandle=setInterval("lightboxShow()",2000);
+		});
+	},function(){
+		
+	});
+	//鼠标靠上专题图片，右上角显示更多图标
+	$(".lightboxPic").each(function(){
+  		  var that = $(this);
+	        that.hoverDelay({
+            outDuring: 600,
+            hoverEvent: function(){
+				that.parent().find(".moreZhuanti").animate({"width":"32px","height":"32px","opacity":"1"},500);     
+            },
+            outEvent: function(){
+				that.parent().find(".moreZhuanti").animate({"width":"0","height":"0","opacity":"0"},500); 
+            }
+        });
+	});
 
 	//tab切换
 	$(".tab").click(function(){
@@ -82,15 +165,31 @@ $(function(){
 		pppparent.find(".page"+pageNum).show();
 	});
 	//显示视频全部标题和时间
-	$(".videoBox").hover(function(){
-		$(this).find(".time").animate({"opacity":"1"},500);
-		$(this).find(".info_hover").stop(true,true).slideUp(50);
-		$(this).find(".videoTitle").animate({"height":"45px"},400);
-	},function(){
-		$(this).find(".time").animate({"opacity":"0"},100);
-		$(this).find(".info_hover").stop(true,true).delay(400).slideDown(300);
-		$(this).find(".videoTitle").animate({"height":"16px"},300);
+	$(".videoBox").each(function(){
+	    var that = $(this);
+	    that.hoverDelay({
+            outDuring: 500,
+            hoverEvent: function(){
+                that.find(".time").animate({"opacity":"1"},100);
+			    that.find(".info_hover").stop(true,false).slideUp(50);
+				that.find(".videoTitle").animate({"height":"45px"},400);
+            },
+            outEvent: function(){
+                that.find(".time").animate({"opacity":"0"},100);
+				that.find(".info_hover").stop(true,true).delay(400).slideDown(300);
+				that.find(".videoTitle").animate({"height":"16px"},300);
+            }
+        });
 	});
+	// $(".videoBox").hover(function(){
+	// 	$(this).find(".time").animate({"opacity":"1"},500);
+	// 	$(this).find(".info_hover").stop(true,true).slideUp(50);
+	// 	$(this).find(".videoTitle").animate({"height":"45px"},400);
+	// },function(){
+	// 	$(this).find(".time").animate({"opacity":"0"},100);
+	// 	$(this).find(".info_hover").stop(true,true).delay(400).slideDown(300);
+	// 	$(this).find(".videoTitle").animate({"height":"16px"},300);
+	// });
 
 
 	///每周新番
@@ -135,8 +234,22 @@ $(function(){
 		
 	});
 
-
-
+	//文章前的小方块
+	$("#block_artical .page .unit").each(function(){
+	    var that = $(this);
+	    that.hoverDelay({
+            outDuring: 200,
+            hoverEvent: function(){
+               	var curHoverNum=that.attr("class").split("unit-")[1];
+               	if(curHoverNum!=0){
+               		$("#block_artical").find(".eff").animate({"top":curHoverNum*29+55+"px"},{easing: 'easeOutBounce', duration: 600 });
+            	}
+            },
+            outEvent: function(){
+               
+            }
+        });
+	});
 
 	//在追剧中显示视频蒙版
 	$(".zhuijuPicArea").hover(function(){
@@ -161,38 +274,13 @@ $(function(){
 			$(this).find(".rightTop").hide();
 		}
 	});
-	//更换专题图片
-	timeHandle=setInterval("lightboxShow()",2000);
-	$(".lightboxLeftTag").mouseover(function(){
-		clearInterval(timeHandle);
-		$(".lightboxGuide").stop(true);
-		$(".element-animate").stop(true);
-		$(".lightboxGuide").queue("test",[]);
-		var picClassName=$(this).attr("class")
-		picNum=picClassName.split("unit-")[1];
-		lightboxShow();
-		$(".lightboxGuide").queue("test",function(){});
-	});
-	// $(".lightboxGuide").mouseout(function(){
-	// 	$(".lightboxGuide").stop(true);
-	// 	$(".element-animate").stop(true);
-	// 	$(".lightboxGuide").queue("test",[]);
-	// 	timeHandle=setInterval("lightboxShow()",2000);
-	// });
-
-	//文章列表前的小图块
-	// $(".wenzhangTitleList").mouseover(function(){
-	// 	$(".wenzhangunit").attr("class","unit wenzhangunit")
-	// 	$(this).parent().attr("class","unit wenzhangunit wenzhangActive");
-	// });
-	
 
 });
 
 var clickNum=0;
 var picNum=1;
 var timeHandle;
-
+var timeHandle2;
 
 function randomBiaoqing(){
 	var n=Math.floor(Math.random()*50+4);
@@ -214,32 +302,44 @@ function showTodayAnime(){
 }
 
 
-
 function lightboxShow(){
 	var imgSrc=$(".lightboxLeft").find(".unit-"+picNum).attr("data-src");
 	$(".lightboxPicStyle").attr("src",imgSrc);
 	var h1content=$(".unit-"+picNum).find("h1").html();
 	var h3content=$(".unit-"+picNum).find("h3").html();
 	
-	$(".element-animate").find("h1").html(h1content);
-	$(".element-animate").find("h3").html(h3content);
-	$(".lightboxGuide").queue("test",function(){
-		$(this).animate({"top":picNum*64+1},picNum*10+80,function(){
-		$(".element-animate").animate({"top":"-1px"},80,function(){
-
-		}).animate({"top":"-10px"},100,function(){
-
-		}).animate({"top":"-1px"},100,function(){
-
-		}).animate({"top":"-9px"},100,function(){
-
-		}).animate({"top":"-6px"},50,function(){
-
-		}).animate({"top":"-1px"},60)
-	});
-	}).dequeue("test");
+	$(".lightboxGuide").find("h1").html(h1content);
+	$(".lightboxGuide").find("h3").html(h3content);
+	$(".lightboxGuide").animate({"top":picNum*64+1},{easing: 'easeOutBounce', duration: 600 });
 	picNum++;
 	if(picNum>4){
 		picNum=0;
 	}
 }
+
+
+(function($){
+    $.fn.hoverDelay = function(options){
+        var defaults = {
+            hoverDuring: 200,
+            outDuring: 200,
+            hoverEvent: function(){
+                $.noop();
+            },
+            outEvent: function(){
+                $.noop();    
+            }
+        };
+        var sets = $.extend(defaults,options || {});
+        var hoverTimer, outTimer;
+        return $(this).each(function(){
+            $(this).hover(function(){
+                clearTimeout(outTimer);
+                hoverTimer = setTimeout(sets.hoverEvent, sets.hoverDuring);
+            },function(){
+                clearTimeout(hoverTimer);
+                outTimer = setTimeout(sets.outEvent, sets.outDuring);
+            });    
+        });
+    }      
+})(jQuery);

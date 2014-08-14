@@ -20,7 +20,7 @@ a{padding: 0;outline: 0;display: block;border: 0;vertical-align: baseline;font-w
 .clearfix {display: block;clear: both;}
 .ico_play{transition: .5s .2s all ease;right:4px;bottom:4px; position: absolute; z-index: 2;width: 18px;height: 18px;background-image: url("images/icon-play.png"); 
 background-position:  0 0; background-repeat:  no-repeat;opacity: 1; display: block;}
-.videoBox:hover .videoPic .ico_play{-webkit-transform:rotate(720deg) ;transition-duration:1s;}
+.videoBox:hover .videoPic .ico_play{-webkit-transform:rotate(720deg);transition-duration:1s;}
 .animate_detailLeft:hover .ico_play{-webkit-transform:rotate(720deg) ;transition-duration:1s;}
 .animate_detailLeft img{transition: .2s 0s box-shadow ease;display: block;margin: 0;border: 1px solid #fff;font-size: 12px;line-height: 16px;
 overflow: hidden;box-shadow: 0 1px 3px rgba(0,0,0,0.3);background-color: #eee; width: 120px; height: 90px;}
@@ -54,11 +54,12 @@ width: auto;height: 16px;line-height: 16px;font-size: 10px; opacity: 0;}
 .right .block .rightTitle .right .tab {transition: none;border: none;height: 20px;font-size: 11px;line-height: 20px;margin: 0;padding: 0 8px;}
 .rightTitle .right{width: auto;}
 
-
-
+/*返回顶部*/
+#toTopContainer{display: none; height: 38px;position: fixed;left: 1180px;bottom: 16px;}
+.toTop{ background: url("images/sprite-guide.png") -125px -122px no-repeat;cursor: pointer; display: block;height: 38px;width: 38px;opacity: 1;z-index: 10000;}
 
 /*头部logo与搜索区*/
-#guideHeaderbg{width: 100%; height:80px; display: block; background-image: url("images/guide.png"); background-size: cover; background-repeat: no-repeat;}
+#guideHeaderbg{width: 100%; height:80px; display: block; background: url("images/guide.png") center top no-repeat;}
 #guideMainArea{width: 980px; height: 80px; margin: auto;  position: relative;}
 #guide_Logo{width: 180px; height: 64px; background-image: url("images/sprite-guide.png"); background-repeat: no-repeat;position: absolute; left: 0;top: 16px;}
 #guide_Search{width: 380px; height: 35px; position: absolute; left: 300px; top: 24px;}
@@ -72,8 +73,8 @@ width: auto;height: 16px;line-height: 16px;font-size: 10px; opacity: 0;}
 .favorIcon{background-position: -136px -64px;}
 .loginIcon{background-position: -156px -64px;}
 #guide_login{width: 64px; height: 48px; display: none;}
-#guide_avatarArea{cursor: pointer; float:right;width: 68; height: 48px; position: relative;}
-#guide_avatar{width: 48px; height: 48px; display: block; border-radius:50%;background-image: url("images/10130550rk22.jpg"); background-repeat: no-repeat; background-size: cover}
+#guide_avatarArea{cursor: pointer; float:left;width: 68; height: 50px; margin-left: 16px; position: relative;}
+#guide_avatar{width: 50px; height: 50px; display: block; border-radius:50%;background-image: url("images/10130550rk22.jpg"); background-repeat: no-repeat; background-size: cover}
 .rightTop{width: 7px;height: 16px; padding: 0 4px 0 4px; position: absolute; top:-6px; right: -8px; font-size: 10px;line-height: 16px; background-color: #e84c3d; color: #fff;border-radius: 2px;
 box-shadow: 0 1px 3px rgba(0,0,0,0.533); }
 
@@ -126,7 +127,7 @@ transition: .2s 0s all ease;border-bottom:1px solid #fff;position:absolute;top: 
 .zhibo:hover{color: #58BBB8;}
 .phoneIcon{background-position: -172px -64px; float: left; width: 16px; height: 17px;margin:10px 4px 0 0;}
 .guide_appWords{color: #777;margin: 10px 8px 0 0;font-size: 12px;height: 17px;line-height: 17px;float: left;}
-
+.guide_appWords:hover{color: #555;}
 .sub-guideInner{ width: 980px; height: 37px; margin: auto; position: relative;  background-color: #fff;}
 
 
@@ -185,11 +186,14 @@ transition: .2s 0s all ease;border-bottom:1px solid #fff;position:absolute;top: 
 .grayBackground:hover{background-color: #fff;}
 .lastTag{border-bottom:0;}
 .lightboxPicStyle{width: 480px; height: 320px; transition:0.2s 0s all ease;}
-.lightboxGuide{ position: absolute; left: -9px;  top: 1px; width: 230px; height: 68px;}
+
+
+.lightboxGuide{ position: absolute; left: -9px; top: 1px; padding: 16px 0 0 16px; width: 230px; height: 52px;  background: url("images/sprite-index.png") no-repeat;
+background-position: -15px -296px; color: #fff;-webkit-transition:all 0s ease 0.8;}
 .lightboxGuide h1{color:#fff;}
 .lightboxGuide h3{color:#fff;}
-.element-animate{ position: absolute; left: -9px; padding: 16px 0 0 16px; width: 230px; height: 52px;  background: url("images/sprite-index.png") no-repeat;
-background-position: -15px -296px; color: #fff;-webkit-transition:all 0s ease 0.8;}
+.moreZhuanti{width: 0; height: 0;opacity: 0; transition:0.2 0.2 all ease; position: absolute;top: 0;right: 0; background:url("images/sprite-index.png") no-repeat; background-position: -258px 0;}
+
 
 
 #zhuantiRight{height: 330px;}
@@ -268,6 +272,8 @@ margin: 0 0 0 10px;text-align: center;cursor: pointer; }
 .scrollbtnicon{width: 12px;height: 12px;color: #333;outline-color: #333; display: block; background-image: url("images/icon-gray.png"); background-repeat: no-repeat; background-position: -313px -119px; margin:6px;}
 .quanbuxinfan{width:210px;height: auto; position: absolute; right: 0; top: 0; }
 .curXF{color: #fff;background-position:-188px -367px;}
+
+
 /*游戏区*/
 #youxi{height: 352px; width: 980px; margin: auto}
 #youxiArea{margin-bottom: 24px;}
@@ -295,7 +301,7 @@ margin: 0 0 0 10px;text-align: center;cursor: pointer; }
 #wenzhangArea .rightTitle .right .tab:hover{color: #fff; background-color: #79c9c6;}
 #wenzhangArea .rightTitle .right .active{color: #fff; background-color: #58bbb8; cursor: default;}
 #block_artical .page .unit-0{height: 70px; }
-#block_artical .page .unit-last{border-bottom: 0; }
+#block_artical .page .unit-13{border-bottom: 0; }
 #block_artical .page .unit{padding: 0 0 4px 12px; margin-bottom: 8px;border-bottom: 1px dashed #ddd;}
 .topWenzhangleft{width: 75px; height: 61px; float: left;}
 .topWenzhangLeftpic{ width: 72px; height: 57px; }
@@ -309,7 +315,7 @@ margin: 0 0 0 10px;text-align: center;cursor: pointer; }
 .wenzhangTitleList:hover{color: #e04270;}
 .wenzhangActive{width: 2px; height: 20px; background-color: #ff9101; float: left; display: block;}
 
-
+.eff{position: absolute;background-color: #ff9101;width: 4px;height: 16px; left: 0;top: 83px;}
 
 
 /*影视，科技，追剧*/

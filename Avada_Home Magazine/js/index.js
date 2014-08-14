@@ -17,10 +17,14 @@ $(function(){
 		var m=$(window).height();
 		var n=$(this).scrollTop();
 		if(m<n){
-			$("#toTopContain").show();
+			$("#toTopContain").fadeIn(700);
 		}else{
-			$("#toTopContain").hide();
+			$("#toTopContain").fadeOut(700);
 		}
+	});
+	$("#toTop").click(function(){
+		$('body,html').animate({scrollTop:0},1000);
+		return false;
 	});
 
 	//焦点图的JS
