@@ -48,6 +48,8 @@ $(function(){
 	//导航栏
 	$(".navA").hover(function(){
 		var curShowNav=$(this).find(".channel").attr("class").split("channel ")[1];
+		$("#sub-guideMengban").stop(true,true).slideDown();
+		$(this).find(".channel").stop(true,true).show();	
 		if(curShowNav=="anime" || curShowNav=="artical" || curShowNav=="sumspecial"){
 			$(this).find(".largeNav").css({"color":"#1FA4C7"});		
 		}else if(curShowNav=="music"){
@@ -61,8 +63,6 @@ $(function(){
 		}else if(curShowNav=="film"){
 			$(this).find(".largeNav").css({"color":"#E04270"});	
 		}
-		$("#sub-guideMengban").stop(true,false).slideDown();
-		$(this).find(".channel").stop(true,false).show();	
 	},function(){
 		$(this).find(".channel").stop(true,false).hide();
 		$("#sub-guideMengban").stop(true,false).slideUp(300);
@@ -94,23 +94,45 @@ $(function(){
 
 
 	///每周新番
+	showTodayAnime();
 	$(".weekStyle").click(function(){
-		$(".xfUpdateTool").hide();
-		$(".xfUpdate").animate({"height":"28px"},500);
-		$(".xfUpdateRight").animate({"height":"28px"},500);
-		$(".weekStyle").css({"background-position":"-232px -367px"});
-
-
-		$(this).parent().parent().find(".xfUpdateRight").animate({"height":"196px"},500);
-		$(this).parent().parent().animate({"height":"196px"},500);
-		$(this).css({"background-position":"-188px -367px"});
-		$(this).parent().parent().find(".xfUpdateTool").show();
+		var aarray=$(this).parent().parent().find(".quanbuxinfan").children("a");
+		var curDate=$(this).attr("date-value");
+		var selectedDate=$(".curXF").attr("date-value");
+		var curpp=$(".curXF").parent().parent();
+		if(curDate!=selectedDate){
+			//将现在显示的条目缩小
+			curpp.find(".xfUpdateTool").hide();
+			curpp.animate({"height":"28px"},500);
+			curpp.find(".xfUpdateRight").animate({"height":"28px"},500);
+			//将点击的条目扩大
+			$(this).parent().parent().find(".xfUpdateRight").animate({"height":"196px"},500);
+			$(this).parent().parent().animate({"height":"196px"},500);
+			$(".curXF").removeClass("curXF");
+			$(this).addClass("curXF");
+			if(aarray.length>8){
+				$(this).parent().parent().find(".xfUpdateTool").show();
+			}
+		}
+		
 	});
+	//右侧类翻页按钮
 	$(".btn-scroll").click(function(){
-		var aarray=$(this).parent().parent().find(".xfUpdateRight").children("a");
-		var length=(aarray.length-7)*24;
-		alert(length);
-		$(this).parent().parent().find(".quanbuxinfan").animate({"top":length+"px"},500);
+		var curDire=$(this).attr("curDirection");
+		if(curDire=="down"){
+			var aarray=$(this).parent().parent().find(".quanbuxinfan").children("a");
+			var length=(aarray.length-8)*24;
+			$(this).parent().parent().find(".quanbuxinfan").animate({"top":"-"+length+"px"},500);
+			$(this).find(".scrollbtnicon").css({"background-position":"-288px -120px"});
+			$(this).animate({"bottom":"170px"},{easing: 'easeOutBounce', duration: 600 });
+			$(this).attr("curDirection","up");
+		}else if(curDire=="up"){
+			$(this).parent().parent().find(".quanbuxinfan").animate({"top":"0px"},500);
+			$(this).find(".scrollbtnicon").css({"background-position":"-313px -119px"});
+			$(this).animate({"bottom":"4px"},{easing: 'easeOutBounce', duration: 600 });
+			$(this).attr("curDirection","down");
+		}
+		
 	});
 
 
@@ -179,6 +201,19 @@ function randomBiaoqing(){
 	}
 	$("#changeBiaoqing").attr("src","images/biaoqing/"+n+".png");
 }
+
+function showTodayAnime(){
+	var todayweek=new Date().getDay();
+	$(".xfUpdate"+todayweek).find(".weekStyle").addClass("curXF");
+	$(".xfUpdate"+todayweek).css({"height":"196px"});
+	$(".xfUpdate"+todayweek).find(".xfUpdateRight").css({"height":"196px"});
+	var aarray=$(".xfUpdate"+todayweek).find(".quanbuxinfan").children("a");
+	if(aarray.length>8){
+		$(".xfUpdate"+todayweek).find(".xfUpdateTool").show();
+	}
+}
+
+
 
 function lightboxShow(){
 	var imgSrc=$(".lightboxLeft").find(".unit-"+picNum).attr("data-src");

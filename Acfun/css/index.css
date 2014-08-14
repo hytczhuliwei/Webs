@@ -107,6 +107,7 @@ background-color: rgba(0, 0, 0, 0);cursor: pointer; float: left;width: 14px; hei
 
 /*导航栏*/
 #nav{width: 980px; height: 38px; margin: auto; position: relative;}
+.navA{min-height: 36px; height:auto;min-width: 28px; width: auto; display: inline-block; float: left; }
 #navLeft{width: 710px;height: 38px; float: left;}
 #navRight{width: 112px; height: 38px;float: right;}
 #sub-guide{display: block; transition: .2s 0s all ease;width: 100%;height: 2px;background: #fff url("images/border.png") center top repeat-x;padding-top: 2px;
@@ -133,7 +134,7 @@ transition: .2s 0s all ease;border-bottom:1px solid #fff;position:absolute;top: 
 #navLeft .channel .navWords:hover{border-bottom: 3px solid #ff9101}
 .shuxian{color: #ccc;width: 4px; float: left; margin-right: 12px;  line-height: 38px;}
 
-.channel{display: none; width: auto; max-width: 980px; height: 35px; position: absolute; z-index: 100; background-color: #fff;}
+.channel{display: none; width: auto; max-width: 980px; height: 35px; position: absolute; z-index: 100;}
 .anime{left: 0;top: 41px;}
 .music{left: 0;top: 41px;}
 .game{left: 57px;top: 41px;}
@@ -144,6 +145,7 @@ transition: .2s 0s all ease;border-bottom:1px solid #fff;position:absolute;top: 
 .artical{left: 370px;top: 41px;}
 .sumspecial{left: 461px;top: 41px;}
 .more{left: 595px;top: 41px;}
+
 .anime .specialNavWords{color: #1fa4c7; }
 .music .specialNavWords{color: #58bbb8; }
 .game .specialNavWords{color: #95be3e; }
@@ -261,10 +263,11 @@ background-position: -15px -296px; color: #fff;-webkit-transition:all 0s ease 0.
 margin: 0 0 0 10px;text-align: center;cursor: pointer; }
 .xfTitle{display: block;height: 24px;line-height: 24px;overflow: hidden;text-shadow: 0 1px 1px rgba(0,0,0,0.1);}
 .xfTitle:hover{color: #e04270;}
-.btn-scroll{width: 24px; height: 24px; z-index: 3; border-radius: 50%; border: 1px solid #ddd;background-color: #fff; text-align: center; cursor: pointer; position: absolute;bottom: 4px;}
-.scrollbtnicon{width: 12px;height: 12px;color: #333;outline-color: #333; display: block; background-image: url("images/icon-grey.png"); background-repeat: no-repeat; background-position: -313px -119px; margin:6px;}
+.btn-scroll{width: 24px; height: 24px; z-index: 5; border-radius: 50%; border: 1px solid #ddd;background-color: #fff; text-align: center; cursor: pointer; position: absolute;bottom: 4px;}
+.btn-scroll:hover{border-color: #ccc;}
+.scrollbtnicon{width: 12px;height: 12px;color: #333;outline-color: #333; display: block; background-image: url("images/icon-gray.png"); background-repeat: no-repeat; background-position: -313px -119px; margin:6px;}
 .quanbuxinfan{width:210px;height: auto; position: absolute; right: 0; top: 0; }
-
+.curXF{color: #fff;background-position:-188px -367px;}
 /*游戏区*/
 #youxi{height: 352px; width: 980px; margin: auto}
 #youxiArea{margin-bottom: 24px;}
