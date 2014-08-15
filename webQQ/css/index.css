@@ -49,7 +49,7 @@ a{display: block; text-decoration: none;}
 .sousuoText{width: 100%; height: 30px; border:1px solid #d9d9d9; border-radius: 5px;}
 .panelBodyWrapper1{ top:30px; position:absolute;left: 0;width: 100%;bottom: 0;}
 .panelBodyWrapperBox{ width: 100%; min-height: 100%;position: relative;}
-.currentChatScrollArea{ width: 100%;position: absolute;top: 0;left: 0;bottom:42px;overflow: hidden;}
+.currentChatScrollArea{ width: 100%;position: absolute;top: 0;left: 0;bottom:50px;overflow: hidden;}
 
 /*conversation会话面板*/
 .currentChatList{ width: 100%;position: relative;box-sizing: border-box;background: #fff;overflow: auto;height: 100%;}
@@ -65,22 +65,79 @@ a{display: block; text-decoration: none;}
 .memberTitle{width: 33.33%; height: 50px;box-sizing:border-box;cursor: pointer; font-size: 16px; padding:16px 0 16px 0; border-bottom:1px solid #ccc; float: left; text-align: center;}
 .memberTabSelected{color: #17b4eb; border-bottom: 2px solid #17b4eb;}
 
-.memberTabBody{width: 100%;height: 400px;overflow: hidden; position: absolute; top: 50px; left: 0;}
-.memberTabBody li{display:none;width: 100%; height: auto; min-height: 400px; position: absolute;; left: 0;top: 0;}
-.memberTabBody .active{display: block;}
-.memberList-friend{width: 100%; height: auto; min-height: 400px; position: relative;}
-.friendlist{width: 100%; height: auto; min-height: 38px;}
-.friendlistTitle{width: 100%; height: 38px;display: block; cursor: pointer; padding: 10px 28px 12px 28px;box-sizing:border-box; text-align: left;
- background: url("image/open_arrow.png") no-repeat;background-position: -18px 3px;border-bottom: 1px solid #ccc; background-size: 14px 14px;background-origin:content-box;}
+.memberTabBody{width: 100%;height:85%; position: absolute; overflow: auto; top: 50px; left: 0;}
+.memberTabBody-friend{display: none;}
+.memberTabBody-group{display: none;}
+.memberTabBody-discuss{display: none;}
 
+.memberTabBody li{width: 100%;}
+.memberTabBody .active{display: block;}
+.memberList-friend{ position: relative;}
+.friendlist{  display: block;}
+.friendlistTitle{ display: block;  padding: 10px 28px 12px 28px;box-sizing:border-box; text-align: left;
+ background: url("image/open_arrow.png") no-repeat;background-position: -18px 3px;border-bottom: 1px solid #ccc; cursor: pointer; background-size: 14px 14px;background-origin:content-box;}
+.friendlistName{width: auto;  font-size: 16px; line-height: 16px; text-align: left;}
+.onlinePercent{width: auto; font-size: 12px; line-height: 16px; text-align: right; float: right; color: gray; }
+.member_signature{padding-right: 6px !important;}
+.friendlistBody{display: none;}
+.memberList-friend .active .friendlistBody{display: block;}
+.memberList-friend .active .friendlistTitle{ background: url("image/open_arrow_fire.png") no-repeat;background-position: -18px 3px;border-bottom: 1px solid #ccc; cursor: pointer; background-size: 14px 14px;background-origin:content-box;}
 
 
 /*plugin控件面板*/
+.panel-plugin{top: 45px;}
+.panel-plugin .panelBodyWrapper1{ top:0px; }
+#plugin-list{width: 100%; position: absolute; left: 0;top: 0px;z-index: 101;}
+.plugin-Item{width: 93px; height: 93px;position: relative; background-color: #fff; float: left; cursor: pointer;}
+#qzone .icon{background-image: url("image/plugin_icon_qzone.jpg");}
+#qmail .icon{background-image: url("image/plugin_icon_qmail.jpg");}
+#qqportal .icon{background-image: url("image/plugin_icon_qq_portal.png");}
+#plugin-list .plugin-Item .icon{width: 100%; height: 100%; background-size: 60%;background-repeat:no-repeat; background-position:center 18%;display: block;  position: absolute; left: 0; top: 0; }
+.plugin-Item a{position: absolute;left: 0; bottom: 6px; width: 100%;height: 19px; line-height: 19px; font-size: 13px;text-align: center;display: block; }
+
+
 
 /*setup设置面板*/
+.panel-setup{top: 45px;}
+.panel-setup .panelBodyWrapper1{ top:0px; z-index: 101;bottom: 40px; }
+.panel-setup .currentChatScrollArea{overflow: auto; bottom: 0;}
+.group{padding: 10px; background-color: #fff; z-index: 101;}
+.row{border-radius: 5px; width: 100%;background: #fff;  border: 1px solid #afc8e2;padding: 10px; box-sizing:border-box;}
+.row1{height: 80px;}
+.row1Left{float: left;}
+.row1Middle{float: left;}
+.row1Right{float: right;position: relative;height: 20px;margin-top: 30px;font-size: 12px;
+cursor: pointer;}
+.rowAvatarName{font-size: 1.2em;line-height: 1.6em;}
+.rowAvatarCount{color: #666;font-size: .9em;}
+.online_icon{display: block;width: 10px;height: 10px;background-image: url("image/state_sprite.gif");background-repeat: no-repeat;float: left;margin-right: 2px;}
+.down_arrow{width: 10px;height: 10px;background-image: url("image/state_sprite.gif");background-repeat: no-repeat;background-position: -162px 4px;float: left;cursor: pointer;}
+.changeOnlineIcon{display: none; position: absolute;border: 1px solid #afc8e2;border-radius: 3px; top: 12px;left: -39px;background: #fff;width: 70px;}
+.changeOnlineIcon li{padding: 5px 3px;cursor: pointer;}
+.changeOnlineIcon li:hover{background-color:#cddeee;}
+.iconState{display: block;width: 10px;height: 10px;margin-top: 2px; background-image: url("image/state_sprite.gif");background-repeat: no-repeat;float: left;margin-right: 2px;}
+.callme_icon{background-position: 0 0;}
+.callme_icon{background-position: -72px 0;}
+.away_icon{background-position: -18px 0;}
+.busy_icon{background-position: -36px 0;}
+.silent_icon{background-position: -108px 0;}
+.hidden_icon{background-position: -54px 0;}
+.offline_icon{background-position: -90px 0;}
 
 
+.row2{height:auto;min-height: 40px; overflow: hidden; line-height: 22px;}
+.row2 span{color: #666;float: left;width: 80px;}
 
+.row3{height: 38px; cursor: pointer;}
+.row4{height: 38px; cursor: pointer;}
+.more_icon{float: right;width: 16px;height: 16px;background: url("image/open_arrow.png") no-repeat center;background-size: 100% 100%;margin-left: 10px;}
+.aboutqq{display: none;}
+.row5{padding: 0;}
+.aboutqqrow{height: 38px;box-sizing:border-box; padding: 10px; border-bottom: 1px solid #afc8e2;}
+.aboutqqrow3{border-bottom: 0;}
+.aboutqqrowbanben{color: #666;float: left;width: 80px;}
+
+.loginout{cursor: pointer; background-image: linear-gradient(rgb(247, 70, 52), rgb(206, 39, 21));background-origin: padding-box;background-size: auto;text-align: center; color: #fff;}
 /*面板切换区*/
 #navTab{ width: 100%;height: 100%;display: block;}
 .navTHead{ width: 100%;height: 100%;display: block;}
