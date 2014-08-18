@@ -11,7 +11,7 @@
 </head>
 <body class="black">
 	<div id="bgAllImage">
-		<img class="bgAllImage" src="css/image/18.jpg">
+		<img class="bgAllImage" src="css/image/2.jpg">
 	</div>
 	<div class="wrap">
 		<div class="QQmainPanel">
@@ -22,7 +22,7 @@
 							<div class="accountHeader">
 								<div class="avatarWrap">
 									<img src="image/avatarPic.jpg">
-									<span class="userOnlineState"></span>
+									<span class="iconState userOnlineState online_icon"></span>
 								</div>
 								<span class="textUserNick">阿井在歇歇凉</span>
 								<span class="textUserShuoShuo"> 小さな恋のうた</span>
@@ -39,6 +39,7 @@
 								</div>
 							</div>
 						</div>
+						<div id="menban"></div>
 						<header class="panelHeader">
 							<h1 id="headerTitle">会话</h1>
 						</header>
@@ -49,107 +50,221 @@
 							<div class="panelBodyWrapper1">
 								<div class="panelBodyWrapperBox">
 									<div class="currentChatScrollArea">
-										<ul class="currentChatList">
-											<li class="listItem">
+										<ul class="currentChatList" id="conversationList">
+											<li class="listItem listItem-chat" id="chat-group-item-787923641">
 												<a href="#" class="avatar">
 													<img src="image/qunPic1.jpg">
 												</a>
-												<p class="memberNick"> 震哥班！幸福在前方！</p>
+												<p class="memberNick">
+												 	<a> 震哥班！幸福在前方！</a>
+												 </p>
 												<p class="memberMsg"> </p>
+												 <!-- <div class="deleteConversation"></div>  -->
+												 <div class="deleteConversation"></div> 
+												<div class="chatMessage">
+													<div class="chatTime">
+														<span>19:50</span>
+													</div>
+													<div class="chatContentOther">
+														<img class="avatarImg" src="image/friendAva1.jpg">
+														<p class="chatNick">杜雅林
+														</p>
+
+														<p class="chatContent ">
+															哈哈
+														</p>
+													</div>
+													<div class="chatContentOther">
+														<img class="avatarImg" src="image/friendAva1.jpg">
+														<p class="chatNick">杜雅林
+														</p>
+														<p class="chatContent ">哈哈</p>
+													</div>
+													<div class="chatContentSelf">
+														<img class="avatarImg" src="image/avatarPic.jpg">
+														<p class="chatNick">阿井在歇歇凉
+														</p>
+														<p class="chatContent ">呵呵</p>
+													</div>
+													<div class="chatContentOther">
+														<img class="avatarImg" src="image/friendAva1.jpg">
+														<p class="chatNick">杜雅林
+														</p>
+														<p class="chatContent ">哈哈</p>
+													</div>
+													<div class="chatContentOther">
+														<img class="avatarImg" src="image/friendAva1.jpg">
+														<p class="chatNick">杜雅林
+														</p>
+														<p class="chatContent ">哈哈</p>
+													</div>
+												</div>
 											</li>
-											<li class="listItem">
+											<li class="listItem listItem-chat" id="chat-friend-item-2341236781">
 												<a href="#" class="avatar">
 													<img src="image/friendAva2.jpg">
 												</a>
-												<p class="memberNick">杜雅林
+												<p class="memberNick">
+													<a>杜雅林</a>
 													<span>(rage your dream)</span>
 												</p>
+												<p class="memberMsg"> </p>
+												<div class="deleteConversation"></div>
+												<div class="chatMessage">
+													<div class="chatTime">
+														<span>19:50</span>
+													</div>
+													<div class="chatContentSelf">
+														<img class="avatarImg" src="image/avatarPic.jpg">
+														<p class="chatNick">阿井在歇歇凉
+														</p>
+														<p class="chatContent ">呵呵</p>
+													</div>
+													<div class="chatContentOther">
+														<img class="avatarImg" src="image/friendAva2.jpg">
+														<p class="chatNick">杜雅林
+														</p>
+														<p class="chatContent ">哈哈</p>
+													</div>
+												</div>
 											</li>
-											<li class="listItem">
+											<li class="listItem listItem-chat" id="chat-friend-item-231445234">
 												<a href="#" class="avatar">
 													<img src="image/g.jpg">
 												</a>
-												<p class="memberNick">李佩红
+												<p class="memberNick">
+													<a>李佩红</a>
 													<span>(李子木)</span>
 												</p>
+												<p class="memberMsg"> </p>
+												<div class="deleteConversation"></div>
+												<div class="chatMessage">
+													<div class="chatTime">
+														<span>19:50</span>
+													</div>
+													<div class="chatContentSelf">
+														<img class="avatarImg" src="image/avatarPic.jpg">
+														<p class="chatNick">阿井在歇歇凉
+														</p>
+														<p class="chatContent ">呵呵</p>
+													</div>
+													<div class="chatContentOther">
+														<img class="avatarImg" src="image/g.jpg">
+														<p class="chatNick">李佩红
+														</p>
+														<p class="chatContent ">哈哈</p>
+													</div>
+												</div>
 											</li>
-											<li class="listItem">
+											<li class="listItem listItem-chat" id="chat-group-item-42412312">
 												<a href="#" class="avatar">
 													<img src="image/qunPic2.jpg">
 												</a>
 												<p class="memberNick">
-												 	1103~淮师计科  
-													<p class="memberMsg">Hello world! </p>
+												 	<a>1103~淮师计科</a>  		
 												</p>
+												<p class="memberMsg">Hello world! </p>
+												<div class="deleteConversation"></div>
+												<div class="chatMessage">
+													<div class="chatTime">
+														<span>19:50</span>
+													</div>
+													<div class="chatContentSelf">
+														<img class="avatarImg" src="image/avatarPic.jpg">
+														<p class="chatNick">阿井在歇歇凉
+														</p>
+														<p class="chatContent ">呵呵</p>
+													</div>
+													<div class="chatContentOther">
+														<img class="avatarImg" src="image/g.jpg">
+														<p class="chatNick">李佩红
+														</p>
+														<p class="chatContent ">哈哈</p>
+													</div>
+												</div>
 											</li>
-											<li class="listItem">
+											<li class="listItem listItem-chat" id="chat-friend-item-45452342">
 												<a href="#" class="avatar">
 													<img src="image/friendAva1.jpg">
 												</a>
-												<p class="memberNick">殷杰
+												<p class="memberNick">
+													<a>殷杰</a>
 													<span>(此岸 叶、落)</span>
 												</p>
+												<p class="memberMsg"> </p>
+												<div class="deleteConversation"></div>
+												<div class="chatMessage">
+													<div class="chatTime">
+														<span>19:50</span>
+													</div>
+													<div class="chatContentSelf">
+														<img class="avatarImg" src="image/avatarPic.jpg">
+														<p class="chatNick">阿井在歇歇凉
+														</p>
+														<p class="chatContent ">呵呵</p>
+													</div>
+													<div class="chatContentOther">
+														<img class="avatarImg" src="image/friendAva1.jpg">
+														<p class="chatNick">殷杰
+														</p>
+														<p class="chatContent ">哈哈</p>
+													</div>
+												</div>
 											</li>
-											<li class="listItem">
+											<li class="listItem listItem-chat" id="chat-group-item-1231245">
 												<a href="#" class="avatar">
 													<img src="image/getface.jpg">
 												</a>
-												<p class="memberNick">淮师CSDN高校俱乐部</p>
+												<p class="memberNick">
+													<a>淮师CSDN高校俱乐部</a>
+												</p>
 												<p class="memberMsg"></p>
+												<div class="deleteConversation"></div>
+												<div class="chatMessage">
+													<div class="chatTime">
+														<span>19:50</span>
+													</div>
+													<div class="chatContentSelf">
+														<img class="avatarImg" src="image/avatarPic.jpg">
+														<p class="chatNick">阿井在歇歇凉
+														</p>
+														<p class="chatContent ">呵呵</p>
+													</div>
+													<div class="chatContentOther">
+														<img class="avatarImg" src="image/friendAva1.jpg">
+														<p class="chatNick">殷杰
+														</p>
+														<p class="chatContent ">哈哈</p>
+													</div>
+												</div>
 											</li>
-											<li class="listItem">
-												<a href="#" class="avatar">
-													<img src="image/qunPic2.jpg">
-												</a>
-												<p class="memberNick">
-												 	1103~淮师计科  
-													<p class="memberMsg">Hello world! </p>
-												</p>
-											</li>
-											<li class="listItem">
+											<li class="listItem listItem-chat" id="chat-group-item-2314141">
 												<a href="#" class="avatar">
 													<img src="image/getface.jpg">
 												</a>
 												<p class="memberNick">
-												 	Unity3D俱乐部  
-													<p class="memberMsg">Hello world! </p>
+												 	<a>Unity3D俱乐部</a>  
+													
 												</p>
-											</li>
-											<li class="listItem">
-												<a href="#" class="avatar">
-													<img src="image/qunPic3.jpg">
-												</a>
-												<p class="memberNick">
-												 	Unity3D俱乐部  
-													<p class="memberMsg">Hello world! </p>
-												</p>
-											</li>
-											<li class="listItem">
-												<a href="#" class="avatar">
-													<img src="image/qunPic3.jpg">
-												</a>
-												<p class="memberNick">
-												 	Unity3D俱乐部  
-													<p class="memberMsg">Hello world! </p>
-												</p>
-											</li>
-											<li class="listItem">
-												<a href="#" class="avatar">
-													<img src="image/qunPic3.jpg">
-												</a>
-												<p class="memberNick">
-												 	Unity3D俱乐部  
-													<p class="memberMsg">Hello world! </p>
-												</p>
-											</li>
-											<li class="listItem">
-												<a href="#" class="avatar">
-													<img src="image/qunPic3.jpg">
-												</a>
-												<p class="memberNick">
-												 	Unity3D俱乐部  
-													<p class="memberMsg">Hello world! </p>
-												</p>
+												<p class="memberMsg">Hello world! </p>
+												<div class="deleteConversation"></div>
+												<div class="chatMessage">
+													<div class="chatTime">
+														<span>19:50</span>
+													</div>
+													<div class="chatContentSelf">
+														<img class="avatarImg" src="image/avatarPic.jpg">
+														<p class="chatNick">阿井在歇歇凉
+														</p>
+														<p class="chatContent ">呵呵</p>
+													</div>
+													<div class="chatContentOther">
+														<img class="avatarImg" src="image/friendAva1.jpg">
+														<p class="chatNick">殷杰
+														</p>
+														<p class="chatContent ">哈哈</p>
+													</div>
+												</div>
 											</li>
 										</ul>
 									</div>
@@ -171,14 +286,15 @@
 													<li class="friendlist">
 														<div class="friendlistTitle">
 															<span class="friendlistName">classmateV2.0</span>
-															<span class="onlinePercent">17/33</span>
+															<span class="onlinePercent">3/3</span>
 														</div>
 														<ul class="friendlistBody">
-															<li class="listItem">
+															<li class="listItem" id="friend-item-12345211">
 																<a href="#" class="avatar">
 																	<img src="image/chenxiaodong.jpg">
 																</a>
-																<p class="memberNick"> 陈小东
+																<p class="memberNick"> 
+																	<a>陈小东</a>
 																	<span>(        小烦恼°)</span>
 																</p>
 																<p class="memberMsg">
@@ -188,11 +304,12 @@
 																	</span>
 																</p>
 															</li>
-															<li class="listItem">
+															<li class="listItem"  id="friend-item-135433411">
 																<a href="#" class="avatar">
 																	<img src="image/friendAva3.jpg">
 																</a>
-																<p class="memberNick"> 陈雨田
+																<p class="memberNick"> 
+																	<a>陈雨田</a>
 																	<span>(雨┪啲 ╲茚记)</span>
 																</p>
 																<p class="memberMsg">
@@ -202,11 +319,12 @@
 																	</span>
 																</p>
 															</li>
-															<li class="listItem">
+															<li class="listItem"  id="friend-item-45134234">
 																<a href="#" class="avatar">
 																	<img src="image/wugang.jpg">
 																</a>
-																<p class="memberNick"> 吴刚
+																<p class="memberNick"> 
+																	<a>吴刚</a>
 																	<span>(Fanatic)</span>
 																</p>
 																<p class="memberMsg">
@@ -221,14 +339,15 @@
 													<li class="friendlist">
 														<div class="friendlistTitle">
 															<span class="friendlistName">internet</span>
-															<span class="onlinePercent">3/7</span>
+															<span class="onlinePercent">2/3</span>
 														</div>
 														<ul class="friendlistBody">
-															<li class="listItem">
+															<li class="listItem"  id="friend-item-434235123">
 																<a href="#" class="avatar">
 																	<img src="image/kagami.jpg">
 																</a>
-																<p class="memberNick">かがみ
+																<p class="memberNick">
+																	<a>かがみ</a>
 																	<span></span>
 																</p>
 																<p class="memberMsg">
@@ -238,11 +357,12 @@
 																	</span>
 																</p>
 															</li>
-															<li class="listItem">
+															<li class="listItem"  id="friend-item-123453522">
 																<a href="#" class="avatar">
 																	<img src="image/wanzi.jpg">
 																</a>
-																<p class="memberNick">   丸子啊  、
+																<p class="memberNick">
+																	<a>   丸子啊  、</a>
 																	<span></span>
 																</p>
 																<p class="memberMsg">
@@ -252,15 +372,16 @@
 																	</span>
 																</p>
 															</li>
-															<li class="listItem">
+															<li class="listItem"  id="friend-item-5634531231">
 																<a href="#" class="avatar">
 																	<img src="image/teemo.jpg">
 																</a>
-																<p class="memberNick">  teemoヽ
+																<p class="memberNick">
+																	<a>  teemoヽ</a>
 																	<span></span>
 																</p>
 																<p class="memberMsg">
-																	<span class="memberState">[在线]</span>
+																	<span class="memberState">[离线]</span>
 																	<span class="memberSignature">
 																		可怜|老子今天不上班
 																	</span>
@@ -272,80 +393,39 @@
 											</li>
 											<li class="memberTabBody-group" >
 												<ul class="currentChatList">
-													<li class="listItem">
+													<li class="listItem" id="group-item-787923641">
 														<a href="#" class="avatar">
 															<img src="image/qunPic1.jpg">
 														</a>
-														<p class="memberNick"> 震哥班！幸福在前方！</p>
+														<p class="memberNick"> 
+															<a>震哥班！幸福在前方！</a>
+														</p>
 														<p class="memberMsg"> </p>
 													</li>
-													<li class="listItem">
+													<li class="listItem" id="group-item-42412312">
 														<a href="#" class="avatar">
 															<img src="image/qunPic2.jpg">
 														</a>
 														<p class="memberNick">
-														 	1103~淮师计科  
+															<a>1103~淮师计科</a>  
 															<p class="memberMsg">Hello world! </p>
 														</p>
 													</li>
-													<li class="listItem">
+													<li class="listItem"  id="group-item-1231245">
 														<a href="#" class="avatar">
 															<img src="image/getface.jpg">
 														</a>
-														<p class="memberNick">淮师CSDN高校俱乐部</p>
+														<p class="memberNick">
+															<a>淮师CSDN高校俱乐部</a>
+														</p>
 														<p class="memberMsg"></p>
 													</li>
-													<li class="listItem">
-														<a href="#" class="avatar">
-															<img src="image/qunPic2.jpg">
-														</a>
-														<p class="memberNick">
-														 	1103~淮师计科  
-															<p class="memberMsg">Hello world! </p>
-														</p>
-													</li>
-													<li class="listItem">
+													<li class="listItem" id="group-item-2314141">
 														<a href="#" class="avatar">
 															<img src="image/getface.jpg">
 														</a>
 														<p class="memberNick">
-														 	Unity3D俱乐部  
-															<p class="memberMsg">Hello world! </p>
-														</p>
-													</li>
-													<li class="listItem">
-														<a href="#" class="avatar">
-															<img src="image/qunPic3.jpg">
-														</a>
-														<p class="memberNick">
-														 	Unity3D俱乐部  
-															<p class="memberMsg">Hello world! </p>
-														</p>
-													</li>
-													<li class="listItem">
-														<a href="#" class="avatar">
-															<img src="image/qunPic3.jpg">
-														</a>
-														<p class="memberNick">
-														 	Unity3D俱乐部  
-															<p class="memberMsg">Hello world! </p>
-														</p>
-													</li>
-													<li class="listItem">
-														<a href="#" class="avatar">
-															<img src="image/qunPic3.jpg">
-														</a>
-														<p class="memberNick">
-														 	Unity3D俱乐部  
-															<p class="memberMsg">Hello world! </p>
-														</p>
-													</li>
-													<li class="listItem">
-														<a href="#" class="avatar">
-															<img src="image/qunPic3.jpg">
-														</a>
-														<p class="memberNick">
-														 	Unity3D俱乐部  
+														 	<a>Unity3D俱乐部</a>  
 															<p class="memberMsg">Hello world! </p>
 														</p>
 													</li>
@@ -393,8 +473,10 @@
 													<p class="rowAvatarCount">12580</p>
 												</div>
 												<div class="row1Right">
-													<div class="online_icon"></div>
-													<div class="down_arrow"></div>
+													<div class="onlineStateShowArea" state="show">
+														<span class="online_icon iconState"></span>
+														<div class="down_arrow"></div>
+													</div>
 													<ul class="changeOnlineIcon">
 										                <li><i class="online_icon iconState"></i>在线</li>
 										                <li><i class="callme_icon iconState"></i>Q我</li>
@@ -420,7 +502,7 @@
 											</div>
 										</div>
 										<div class="group">
-											<div class="row row4">
+											<div class="row row4" state="show">
 												关于QQ
 												<span class="more_icon"></span>
 											</div>
@@ -491,34 +573,32 @@
 			</div>
 		</div>
 		<div id="talkContainer">
-			<div id="chatPanel">
+			<div id="chatPanel" curid="">
 				<div id="panelHeader">
 					<div id="panelLeftButton">
 						<span id="panelLeftButtonI"></span>
 					</div>
-					<h1 id="panelTitle">殷杰</h1>
+					<h1 id="panelTitle"></h1>
 					<div id="panelRightButton">
 						<span id="panelRightButtonI">关闭</span>
 					</div>
-				</div>
+				</div>	
+				<ul class="pannelMenuList" isshow="false">
+					<li>
+						<div class="menuListIcon menuListIcon1"></div>
+						<a class="menuListIcon1Words">QQ空间</a>
+					</li>
+					<li>
+						<div class="menuListIcon menuListIcon2"></div>
+						<a  class="menuListIcon2Words">详细资料</a>
+					</li>
+					<li>
+						<div class="menuListIcon menuListIcon3"></div>
+						<a class="menuListIcon3Words">聊天记录</a>
+					</li>
+				</ul>
 				<div id="panelBodyWrapper">
-					<div id="panelBodyBox">
-						<div class="chatTime">
-							<span>19:50</span>
-						</div>
-						<div class="chatContentSelf">
-							<img class="avatarImg" src="image/avatarPic.jpg">
-							<p class="chatNick">
-							</p>
-							<p class="chatContent ">呵呵</p>
-						</div>
-						<div class="chatContentOther">
-							<img class="avatarImg" src="image/friendAva1.jpg">
-							<p class="chatNick">殷杰
-							</p>
-							<p class="chatContent ">哈哈</p>
-						</div>
-					</div>
+					<div id="panelBodyBox"></div>
 				</div>
 				<div id="panelFooter">
 					<div class="chat_toolbar">
@@ -527,6 +607,58 @@
 						</div>
 						<textarea class="chatInputArea"></textarea>
 						<button class="sendMessageBtn">发送</button>
+					</div>
+				</div>
+			</div>
+			<div id="setupPanel">
+				<div id="setuppanelHeader">
+					<div id="setuppanelLeftButton">
+						<span id="setuppanelLeftButtonI"></span>
+						<a>设置</a>
+					</div>
+					<h1 id="setuppanelTitle">消息相关设置</h1>
+				</div>	
+				<div id="setuppanelBodyWrapper">
+					<div id="setuppanelBodyBox">
+						<div class="group">
+							<div class="row setupRow1">
+								<span class="lable">声音</span>
+								<lable class="switch switch-white">
+									<input type="checkBox" class="checkBoxStyle" checked>
+									<span></span>
+								</lable>
+							</div>
+							<div class="row setupRow2">
+								<span class="lable">消息浮窗</span>
+								<lable class="switch switch-white">
+									<input type="checkBox" class="checkBoxStyle" checked>
+									<span></span>
+								</lable>
+							</div>
+						</div>
+						<div class="group">
+							<div class="row setupRow3">
+								<p>
+									<span class="lable">HTTPS</span>
+									<lable class="switch switch-white">
+										<input type="checkBox" class="checkBoxStyle" >
+										<span></span>
+									</lable>
+								</p>
+								<P >
+									<span class="huanhangLable">使用 HTTPS 加密聊天内容</span>
+								</P>
+							</div>
+						</div>
+						<div class="group">
+							<div class="row setupRow4">
+								<span class="huanhangLable">按Ctrl+Enter键发送消息</span>
+								<lable class="switch switch-white">
+									<input type="checkBox" class="checkBoxStyle" >
+									<span></span>
+								</lable>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
