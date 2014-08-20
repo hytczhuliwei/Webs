@@ -107,7 +107,7 @@ background-image: url('images/sprite_btn.png');background-repeat: no-repeat;}
 .inputBox {position: relative;z-index: 10;top: 4px;width: 350px;height: 40px;margin: 0px auto;background-position: -2px -440px;}
 .registPhone #input_wrap_username .inputBox {z-index: 770;}
 .inputBox input{display: inline;position: absolute;z-index: 10;float: left;width: 326px;height: 23px;padding: 9px 12px 8px;background-color: transparent;border: medium none;font: 700 16px/23px Arial;vertical-align: middle;color: #222;}
-
+.inputSuc {background-position: -2px -530px;}
 /*选择不同国家的手机号*/
 .otherMbInput input {float: left;right: 0;width: 242px;border-left: none;padding: 9px 12px 8px 0;}
 .otherMb{display:none;position: absolute;top: 0px;left: 0px;z-index: 11;width: 97px;height: 40px;background: none repeat scroll 0% 0% transparent;}
@@ -152,7 +152,7 @@ background-image: url('images/sprite_btn.png');background-repeat: no-repeat;}
 .input_with_btn input{padding: 9px 12px 8px;width: 188px;overflow: hidden;border-right: medium none;position: absolute;left: 0px;top: 0px;}
 .input_with_btn a.input_expand_btn {display: block;position: absolute;top: 1px;right: 1px;z-index: 11;background-position: -4px 0px;width: 142px;height: 38px;color: #FFF;line-height: 38px;text-align: center;text-decoration: none;}
 .input_with_btn a.input_expand_btn.wait{background-position: -292px -3px;color: #666;height: 40px;line-height: 40px;overflow: hidden;}
-
+.checkCodeTip{display: block;}
 
 
 
