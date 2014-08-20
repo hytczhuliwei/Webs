@@ -73,7 +73,7 @@ width: 442px;padding: 10px 12px;height: 22px;line-height: 22px;text-align: cente
 
 
 /*主注册窗口*/
-.mod_regist{position: relative;float: left;width: 466px;top: 0px;height: 369px;padding-top: 20px;}
+.mod_regist{position: relative;float: left;width: 466px;top: 0px;height: 369px;padding-top: 20px; overflow: hidden;}
 .mode_aimate_wrap .mod_regist{margin-top: 42px;}
 .mod_regist_nav{position: relative;z-index: 2000;}
 .mod_regist_nav ul{width: 465px;height: 30px;margin: 0px auto;}
@@ -160,9 +160,9 @@ background-image: url('images/sprite_btn.png');background-repeat: no-repeat;}
 #input_wrap_password.input_wrap {display: block;}
 .tips .curLow .rankLow, .tips .curMiddle .rankMiddle, .tips .curHigh .rankHigh {background: none repeat scroll 0% 0% #58CBFD;color: #FFF;}
 .tips .rankLow, .tips .rankMiddle, .tips .rankHigh {display: block;width: 45px;height: 18px;margin: 3px 1px 1px;background: none repeat scroll 0% 0% #CEF0F5;color: #FEFDFE;text-align: center;line-height: 18px;cursor: default;}
-.tips span {float: left;}
+.tips span {float: left; display: inline-block;}
 .tips .rankLow {margin-left: 5px;}
-
+#passwordTip span .showPassBtn {margin-right: 15px; display: inline-block;}
 
 
 /*邮箱注册*/
@@ -202,8 +202,8 @@ background-image: url('images/sprite_btn.png');background-repeat: no-repeat;}
 .mod_regist_border2{right: 0px;}
 
 
-
-
+.footer {width: 880px;height: 48px;overflow: hidden;margin: 0 auto;padding: 10px 0;background: url("images/footer_bg.png") center top no-repeat;text-align: center;line-height: 2;color: #666;}
+.footer a{display: inline;}
 
 
 

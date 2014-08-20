@@ -360,7 +360,7 @@
 												</span>
 											</div>
 										</div>
-										<div id="mobileTip" class="tips show_tips">
+										<div id="mobileTip" class="tips">
 											<p class="tipsInfo" style="display: none;">
 												<span class="phoneerrortip">11位数字，</span>
 												<a id="js_get_flags" class="js_get_flags" hidefocus="true">
@@ -377,7 +377,7 @@
 										<div class="inputBox inputError">
 											<input class="text email" name="email" id="email" tabindex="10" autocomplete="off" type="text" placeHolder="邮箱（必须填写）">
 										</div>
-										<div class="tips show_tips" id="emailTip">
+										<div class="tips" id="emailTip">
 											<p style="display: none;" class="tipsInfo">目前只支持.com .net .cn .org后缀的邮箱</p>
 											<p style="display: block;" class="tipsError">注册邮箱未填写</p>
 											<p style="display: block;" class="tipsBg"></p>
@@ -385,20 +385,20 @@
 									</div>
 									<div class="input_wrap" id="input_wrap_custom">
 										<div class="inputBox inputError">
-											<input class="text username" name="username" id="username" tabindex="10" autocomplete="off" type="text" placeHolder="个性账号（必须填写）">
+											<input class="text username" name="username" id="username" tabindex="10" autocomplete="off" type="text" placeHolder="个性账号（必须填写）" maxlength="16">
 										</div>
-										<div class="tips show_tips" id="usernameTip">
+										<div class="tips" id="usernameTip">
 											<p style="display: none;" class="tipsInfo">4-16位字母或数字，首位为字母</p>
 											<p style="display: block;" class="tipsError">个性账号未填写</p>
 											<p style="display: block;" class="tipsBg"></p>
 					                    </div>
 									</div>
-									<div id="input_wrap_smscode" class="input_wrap" style=""><!-- pointer-events:none -->
+									<div id="input_wrap_smscode" class="input_wrap" style="pointer-events:none"><!--  -->
 										<div class="inputBox input_with_btn inputError">
-											<input class="text checkCode"  name="checkCode" id="checkCode" tabindex="11" type="text" placeHolder="短信验证码（必须填写）"> 
+											<input class="text checkCode"  name="checkCode" maxlength="6" id="checkCode" tabindex="11" type="text" placeHolder="短信验证码（必须填写）"> 
 											<a href="javascript:void(0);" id="js_get_phone" class="input_expand_btn wait" hidefocus="true">免费获取验证码</a>
 										</div>
-										<div class="tips show_tips" id="checkCodeTip">
+										<div class="tips" id="checkCodeTip">
 											<p style="display: none;" class="tipsInfo">请填写短信中的6位数字，收不到请重试</p>
 											<p style="display: block;" class="tipsError">验证码未填写</p>
 											<p style="display: block;" class="tipsBg"></p>
@@ -407,10 +407,10 @@
 									<p class="expand_tip"></p>
 									<div id="input_wrap_password" class="input_wrap">	
 					                    <div class="inputBox inputError">
-								        	<input class="text password" name="password" id="password" tabindex="13" type="password" placeHolder="静态密码（必须填写）">
+								        	<input class="text password" name="password" id="password" tabindex="13" type="password" placeHolder="静态密码（必须填写）" maxlength="30">
 					                    </div>
-										<div class="tips " id="passwordTip">
-											<p style="display: nshow_tipsone;" class="tipsInfo curLow">
+										<div class="tips" id="passwordTip">
+											<p style="display: none;" class="tipsInfo curLow">
 												<span>6~30位字母或数字,
 													<a  id="btnShowPass" name="btnShowPass" class="showPassBtn" hidefocus="true">显示密码</a>
 												</span> 
@@ -433,7 +433,7 @@
 											</span> 
 											<a class="reVerify" id="reVerify" hidefocus="true" title="看不清？点此刷新验证码">刷新验证码</a>
 										</div>
-										<div class="tips show_tips" id="validateCodeTip">
+										<div class="tips" id="validateCodeTip">
 											<p style="display: none;" class="tipsInfo">图片内字符，不分大小写</p>
 											<p style="display: block;" class="tipsError">验证码不能为空</p>
 											<p style="display: block;" class="tipsBg"></p>
@@ -462,6 +462,11 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="footer">
+		<a href="http://www.snda.com" target="_blank" hidefocus="true">盛大网络</a> 
+		旗下网站 上海盛展网络科技有限公司 版权所有<br>
+		24小时客服热线：95105222；未开通95地区或海外用户请拨 +86-21-50504728
 	</div>
 </body>
 </html>
