@@ -194,7 +194,7 @@ $(function(){
 		}
 
 		//邮箱验证
-		regEmail=/\b[\w-]+(\.[\w-]+)*@[\w-]+(\.((?=com)|(?=net)|(?=cn)|(?=org))\b)/;//验证静态密码正则
+		regEmail=/^[\w-]+(\.[\w-]+)*@[\w-]+(\.((com)|(net)|(cn)|(org)))$/;//验证静态密码正则
 	    var htmlEmail="";  
 	    var emailValue=$("#email").val();
 		if($("#email").parent().attr("class")=="inputBox inputSuc"){

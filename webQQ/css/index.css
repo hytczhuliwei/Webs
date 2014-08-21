@@ -191,8 +191,8 @@ cursor: pointer;}
 #panelRightButton{cursor: pointer; width: 57px;height: 19px;padding: 6px 10px; vertical-align : center; border-radius: 5px;margin: 5px 10px 7px 2px;float: left;position: relative; }
 #panelRightButtonI{  max-width: 100px; width: auto; height: 14px; line-height: 18px;  text-align: center; display: block;font-size: 14px;color: #fff;}
 
-#panelBodyWrapper{ width: 100%;position: absolute;top: 45px; bottom: 50px; left: 0;height: auto;}
-#panelBodyBox{  width: 100%; height: 100%;position: relative;background: rgba(250,250,250,1); overflow: auto; }
+#panelBodyWrapper{ width: 100%;position: absolute;top: 45px; bottom: 50px; left: 0;height: auto; overflow: hidden;}
+#panelBodyBox{  width: 100%; height: 440px;position: relative;background: rgba(250,250,250,1); overflow: auto;}
 .chatTime{ text-align: center;width: 100%; height: 37px; }
 .chatTime span{color: rgba(255,255,255,0.8);background: rgba(0,0,0,0.3);padding: 2px 8px;display: inline-block;margin: 10px;font-size: 13px;border-radius: 8px;}
 .chatContentSelf{text-align: right;padding: 10px;width: 660px;height: auto;}
@@ -250,19 +250,33 @@ cursor: pointer;}
 
 
 /*表情*/
-.qq_face_area {width: 100%;text-align: center;margin: 0 auto;overflow: hidden;cursor: pointer;}
-.qq_face_area {display: block;width: 700px;text-align: center;margin: 0 auto;overflow: hidden;}
-.wrap {width: 1000px;height: 100%;margin: 0 auto;}
-.qq_face_area .wrap li {list-style: none;height: 280px;float: left;}
-.faceIteam {list-style: none;height: 144px;float: left;background-repeat: no-repeat;background-size: contain;}
-.faceIteam {width: 700px!important;}
+.qq_face_area {display: block;width: 700px;text-align: center;margin: 0 auto;overflow: hidden;width: 100%;text-align: center;
+	margin: 0 auto;overflow: hidden;cursor: pointer;}
+
+.wrap {width: 1000px;height: 100%;margin: 0 auto;-webkit-transition: all 0.2s ease-out;}
+.qq_face_area .wrap li {list-style: none;height: 280px;float: left;display: none; }
+.faceIteam {width: 700px;background-size: 100% 80%; list-style: none;height: 144px;float: left;background-repeat: no-repeat;}
 .faceIteam1 {background-image: url("image/1.jpg");}
 .faceIteam2 {background-image: url("image/2.jpg");}
 .faceIteam3 {background-image: url("image/3.jpg");}
 .faceIteam4 {background-image: url("image/4.jpg");}
 .faceIteam5 {background-image: url("image/5.jpg");}
 .faceIteam6 {background-image: url("image/6.jpg");}
+.qq_face_area .wrap .selectedFace{display: block;}
+.btnsWrap {padding: 0 0 10px 0px;background: rgba(34,34,34,.7);}
+.qq_face_area ul li i {width: 99px;height: 74px;display: block;float: left;}
+.qq_face_area ul li i:hover{border: 1px solid #5f9cc5;}
+.btnsWrap {padding: 0 0 10px 290px; height:15px;  background: rgba(34,34,34,.7);}
+.btnsWrap>li {float: left;list-style-type: none;margin: 5px 10px 0 0;padding: 2px;width: 10px;height: 10px;-webkit-border-radius: 10px;-moz-border-radius: 10px;-ms-border-radius: 10px;border-radius: 10px;background: gray;}
+.btnsWrap>li.selected {background: #000;}
 
-.btnsWrap {padding: 0 0 10px 290px;border-radius: 0 0 6px 6px;background: rgba(34,34,34,.7);}
-.btnsWrap {padding: 0 0 10px 290px;}
+
+
+
+
+
+
+
+
+
 /*Right end*/
