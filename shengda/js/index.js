@@ -26,9 +26,37 @@ $(function(){
 	 	$("#div_Register").animate({"top":"0px","height":"369px"},800);
 	 	$(".slide_bg").slideUp(800);
 	});
+	//安装G家的手机号验证框
+	$("#mobile_slide").keyup(function(){
+		 regMobile=/^1[3|4|5|8][0-9]\d{8}$/i;//验证手机正则
+	    var mobileValue=$("#mobile_slide").val();
+	    $("#slide_app_mobiletip_view").css("visibility","visible");
+		if(regMobile.test(mobileValue)){
+			$("#slide_app_mobiletip_view").css("visibility","hidden");
+		}
+	});
+	//安装G家跳往非大陆手机注册
+	$(document).on("click","#other_reg_country",function(){
+		$("#mobileTip").find(".phoneerrortip").html("中国大陆号码？");
+		$("js_get_flags").html("点击这里");
+		$("#input_wrap_username").find(".otherMb").show();
+		$("#input_wrap_username").addClass("otherMbInput");
+
+		$(".slide_top .down_txt").css("display","inline");
+	 	$(".slide_top .slide_togg").css("display","none");
+	 	$(".mode_aimate_wrap .slide_top").animate({"top":"20px"},800);
+	 	$("#div_Register").animate({"top":"0px","height":"369px"},800);
+	 	$(".slide_bg").slideUp(800);
+	});
 	//弹出手机下一步窗口
 	$(".setup_btn").click(function(){
-		$(".tran_slide_box1").animate({"left":"0"},500);
+		regMobilesolide=/^1[3|4|5|8][0-9]\d{8}$/i;//验证手机正则
+	    var htmlMobilesolide="";
+	    var mobilesolideValue=$("#mobile_slide").val();
+		if(regMobilesolide.test(mobilesolideValue)){
+			$(".tran_slide_box1").animate({"left":"0"},500);
+		}
+		
 	});
 	$("#btnRightArr").click(function(){
 		$(".tran_slide_box1").animate({"left":"466px"},500);
@@ -53,7 +81,26 @@ $(function(){
 
 	
 	$(document).click(function(){
+		//安装G家的手机号码验证
+	    regMobilesolide=/^1[3|4|5|8][0-9]\d{8}$/i;//验证手机正则
+	    var htmlMobilesolide="";
+	    var mobilesolideValue=$("#mobile_slide").val();
+		if(mobilesolideValue.lenth<11 || !regMobilesolide.test(mobilesolideValue)){
+			htmlMobilesolide+='手机号格式错误，请填写11位数字，非大陆手机';
+			htmlMobilesolide+='<a id="other_reg_country">点此注册</a>';								
+			$("#slide_app_mobiletip_text").html(htmlMobilesolide);								
+		}
+		if(mobilesolideValue==""){		
+			htmlMobilesolide='11位数字，非大陆手机';
+			htmlMobilesolide+='<a id="other_reg_country">点此注册</a>';
+			$("#slide_app_mobiletip_text").html(htmlMobilesolide);
+		}
+		
+
+
+
 		//手机号码验证
+		$("#flag_list").hide();//隐藏各地区区号栏
 	    regMobile=/^1[3|4|5|8][0-9]\d{8}$/i;//验证手机正则
 	    var htmlMobile="";
 	    var mobileValue=$("#mobile").val();
@@ -238,6 +285,7 @@ $(function(){
 	});
 	//手机号栏
 	$("#mobile").click(function(){
+		$("#flag_list").hide();
 		if($("#mobile").parent().parent().attr("class")=="input_wrap otherMbInput"){
 			$("#js_get_flags").prev().html("中国大陆号码？");
 			$("#js_get_flags").html("点击这里");
@@ -252,16 +300,16 @@ $(function(){
 	});
 	//切换到外国号码输入区
 	$(document).on("click",".js_get_flags",function(){
-		if($("#mobile").parent().parent().attr("class")!="input_wrap otherMbInput"){
+		if($("#input_wrap_username").attr("class")!="input_wrap otherMbInput"){
 			$(this).prev().html("中国大陆号码？");
 			$(this).html("点击这里");
 			$(this).parent().parent().parent().find(".otherMb").show();
-			$(this).parent().parent().parent().addClass("otherMbInput");
+			$("#input_wrap_username").addClass("otherMbInput");
 		}else{
 			$(this).prev().html("11位数字，");
 			$(this).html("非中国大陆号码点击这里");
-			$(this).parent().parent().parent().find(".otherMb").hide();
-			$(this).parent().parent().parent().removeClass("otherMbInput");
+			$("#input_wrap_username").find(".otherMb").hide();
+			$("#input_wrap_username").removeClass("otherMbInput");
 		}
 		return false;
 	});
@@ -274,15 +322,17 @@ $(function(){
 		$("#country_code").html("+"+phonequhao);
 	});
 	$(".selcountry_inner").click(function(){
-		$("#flag_list").show();
+		if($("#flag_list").attr("style")=="display: none;"){
+			$("#flag_list").show();
+		}else{
+			$("#flag_list").hide();
+		}
 		return false;
 	});
 	$(".country_search").click(function(){
 		return false;
 	});
-	$(document).click(function(){
-		$("#flag_list").hide();
-	});
+
 
 
 	//手机验证码
@@ -315,8 +365,8 @@ $(function(){
 		return false;
 	});
 	$("#password").keyup(function(){
-		var passwordlength=$(this).val().length;
 		var passwordValue=$(this).val();
+		var passwordlength=passwordValue.length;
 		if(passwordlength<7){
 			$("#passwordTip").find(".tipsInfo").attr("class","tipsInfo curLow");
 		}else if (passwordlength<11) {
@@ -330,6 +380,9 @@ $(function(){
 			$("#passwordTip .tipsInfo").hide();
 			$("#passwordTip .tipsError").show();
 		}
+		passwordValue=passwordValue.replace(/\s/g,"");
+		passwordValue=passwordValue.replace(/[\u4e00-\u9fa5]/g,"");
+		$(this).val(passwordValue);
 	});
 
 	//邮箱验证
@@ -355,6 +408,15 @@ $(function(){
 		$("#usernameTip .tipsInfo").show();
 		$("#usernameTip .tipsError").hide();
 		return false;
+	});
+
+
+	//键盘按下抬起事件
+	$("#mobile,#email,#username,#password,#validateCode,#checkCode,#mobile_slide").keyup(function(){
+		var passwordValue=$(this).val();
+		passwordValue=passwordValue.replace(/\s/g,"");
+		passwordValue=passwordValue.replace(/[\u4e00-\u9fa5]/g,"");
+		$(this).val(passwordValue);
 	});
 
 });
