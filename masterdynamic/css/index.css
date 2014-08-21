@@ -1,0 +1,104 @@
+ @font-face {
+      font-family: 'blenderbold';
+      src: url('../fonts/blenderpro-bold-webfont.eot');
+      src: url('../fonts/blenderpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/blenderpro-bold-webfont.woff') format('woff'),
+	   url('../fonts/blenderpro-bold-webfont.ttf') format('truetype'),
+	   url('../fonts/blenderpro-bold-webfont.svg#blenderbook') format('svg');
+	   font-family: 'blendermedium';
+      src: url('../fonts/blenderpro-medium-webfont.eot');
+      src: url('../fonts/blenderpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/blenderpro-medium-webfont.woff') format('woff'),
+	   url('../fonts/blenderpro-medium-webfont.ttf') format('truetype'),
+	   url('../fonts/blenderpro-medium-webfont.svg#blenderbook') format('svg');
+	   font-family: 'blenderthin';
+      src: url('../fonts/blenderpro-thin-webfont.eot');
+      src: url('../fonts/blenderpro-thin-webfont.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/blenderpro-thin-webfont.woff') format('woff'),
+	   url('../fonts/blenderpro-thin-webfont.ttf') format('truetype'),
+	   url('../fonts/blenderpro-thin-webfont.svg#blenderbook') format('svg');
+	   font-family: 'blenderbook';
+      src: url('../fonts/blenderpro-book-webfont.eot');
+      src: url('../fonts/blenderpro-book-webfont.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/blenderpro-book-webfont.woff') format('woff'),
+	   url('../fonts/blenderpro-book-webfont.ttf') format('truetype'),
+	   url('../fonts/blenderpro-book-webfont.svg#blenderbook') format('svg');
+      font-weight: normal;
+      font-style: normal;
+ }
+
+
+body{ font-family: blenderbook,Verdana,sans-serif;font-weight: lighter;color: #555;font-size: 100%;text-align: center;}
+*{margin: 0;padding: 0;}
+*, *:after, *:before {box-sizing: border-box;}
+ul,li{list-style: none outside none;}
+input,button,textarea, select{outline: none;resize:none;}
+a{text-decoration: none;cursor: pointer; display: block; outline: none;}
+div{display: block;}
+img{border:0;}
+
+
+
+/*伪元素改变placeholder属性*/
+/*方法一：input:-webkit-placeholder,textArea-webkit-placeholder{color: #999}*/
+/*::-webkit-input-placeholder { color: #999;cursor: text;font-size: 14px; font-weight: normal;}*/
+
+
+/*header*/
+#header{position: fixed;z-index: 4000;width: 100%;top: 0px;max-width: 1440px;}
+.headerInner{font-size: 15px;width: 100%;position: relative;z-index: 100;line-height: 1.25;background-color: #FFF;border-bottom: 1px solid #F4F5F5;height: 90px;text-align: center;
+clear: both;overflow: hidden;}
+.gutter_left{padding-left: 4%;}
+.gutter_right{padding-left: 4%;}
+.header_logo{width: 250px;display: inline-block;float: left;vertical-align: middle;margin: 0px;}
+.header_logo a{padding: 39px 0;}
+.iconssprite {display: inline-block;}
+.md_logo {background-image: url("images/icons-s30d7fe76cb.png");background-position: 0px -49px;background-repeat: no-repeat;overflow: hidden;display: inline-block;
+height: 12px;width: 250px; display: block;}
+
+.header_nav{width: 50%;max-width: 550px;font-size: 15px;display: inline-block;vertical-align: middle;margin: 0px 3%;}
+.headerInner ul li {text-transform: uppercase;display: inline-block;font-size: 0.938rem;line-height: 1.875rem;color: #DBD8D3;letter-spacing: 0.05em;}
+.headerInner li {margin-right: 35px;color: #555;}
+.headerInner li a{font-family: blenderbold,Verdana,sans-serif;font-weight: lighter;color: #555;display: block;padding: 29px 0px;}
+.headerInner li:hover a{color: #F0C417;}
+.headerInner .header_cart a, .headerInner .header_cart p { color: #B1ACA1;display: inline-block;padding: 28px 0px;}
+.header_cart{width: 250px;float: right;clear: right;z-index: 10;position: relative;display: inline-block;text-align: right;vertical-align: middle;margin: 0px;padding: 1px 0px;}
+.header_cart .account {margin-right: 25px;padding-bottom: 0px;font-family: blenderbold,Verdana,sans-serif;font-weight: lighter;}
+#cartToggle {padding: 28px 10px;border-right: 1px solid #FFF;border-left: 1px solid #FFF;}
+.icon_cart {margin-right: 3px;}
+#cartToggle span {display: inline-block; vertical-align: middle;}
+.icon_cart {background-image: url("images/icons-s30d7fe76cb.png");background-position: -67px 0px;background-repeat: no-repeat;overflow: hidden;display: inline-block;height: 18px;width: 18px;}
+#cartCount {font-family: blenderbold,Verdana,sans-serif;font-weight: lighter;}
+
+
+/*wrapper*/
+.wrapper{max-width: 1440px;margin: 89px 0px 0px;padding: 0px;background-color: #FFF;overflow: hidden;clear: both;position: relative;top: 0px;transition: top 0.5s ease 0s;}
+.product_fmodule{padding-top: 80px;padding-bottom: 95px;position: relative;}
+.product_fmodule h3{font-weight: lighter;font-size: 50px;color: #555;margin: 0px;}
+.product_variants {position: absolute;left: 100px;top: 300px;}
+.featured_products .product_fmodule h2 {font-family: blendermedium,Verdana,sans-serif;font-weight: lighter;font-size: 5.625rem;color: #555;margin: 0px;}
+.product_variants h2 {margin-bottom: 5px;}
+.product_variants .variants { margin-bottom: 25px;}
+.pblack, .pblue, .pbrown, .pcolor, .psilver, .pyellow { display: inline-block;width: 40px;height: 40px;border-radius: 40px;border: 3px solid #DEDDDC;margin: 0px 5px;cursor: pointer;}
+.pblack{background-image:url('images/MH40_black_texture_1024x1024.png')}
+.pbrown{background-image:url('images/MH40_brown_texture_1024x1024.png')}
+.variants .selected{border-color: #F0C417;}
+.btn{font-family: blenderbold,Verdana,sans-serif;font-weight: lighter;cursor: pointer;width: 200px;display: block;background-color: #F0C417;
+color: #FFF;border-radius: 3px;text-transform: uppercase;margin: 0px auto;text-align: center;font-size: 1.125rem;border: medium none;padding: 18px 0px;outline: 0px none;letter-spacing: 0.05em;}
+.featured_products .product_fmodule .product_image {width: 100%;max-width: 600px; margin: 15px auto 50px;}
+.featured_products .product_fmodule .product_desc {margin: 20px auto 0px;max-width: 550px;text-align: center;}
+.product_desc p{font-family: blenderbook,Verdana,sans-serif;font-size: 18px;line-height: 30px; font-weight:100;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
