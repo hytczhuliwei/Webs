@@ -278,6 +278,7 @@ $(function(){
 	$(document).on("click",".act-reply",function(){
 		$(".comment-box-wrap").hide();
       	$(".mod-commnets-poster").hide();
+      	var replyTo=$(this).parent().parent().find(".c_tx").html();
 		if($(this).parent().parent().parent().parent().find(".comment-box-swrap").attr("class")==null){
 			var html="";                                         
 			html+='<div class="comment-box-swrap">';
@@ -287,7 +288,7 @@ $(function(){
 			html+='<div class="qz-poster-editor-cont">';
 			html+='<div class="qz-input bor2">';
 			html+='<div idprefix="$6">';
-			html+='<textarea class="textinput replytext"></textarea>';
+			html+='<textarea class="textinput replytext"><img src="" alt="回复 '+replyTo+':"></textarea>';
 			html+=' </div>';
 			html+='</div>';
 			html+='</div>';
@@ -315,6 +316,7 @@ $(function(){
 			html+=' </div>';
 			html+='</div>';
 			$(this).parent().parent().parent().parent().find(".comments-item-bbd").append(html);
+			$(this).parent().parent().parent().parent().find(".textinput").val('');
 			$(this).parent().parent().parent().parent().find(".comment-box-swrap").show();
 		}else{
 			$(this).parent().parent().parent().parent().find(".comment-box-swrap").show();
