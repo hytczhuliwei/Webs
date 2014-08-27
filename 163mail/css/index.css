@@ -1,0 +1,111 @@
+body {color: #222;overflow: hidden;height: 100%;width: 100%;line-height: 1.666;font-size: 12px;background: #fff;color: #222;}
+body, input, textarea {outline: none; font-family: 'Microsoft Yahei',verdana;}
+*{margin: 0; padding: 0;}
+ol,ul,li{list-style: none;}
+a{color: #606065;outline: none; text-decoration: none; cursor: pointer;}
+img{border: 0;}
+h1, h2, h3, h4, h5, h6, th {font-size: 100%;font-weight: 400;}
+header, footer, section, aside, article, nav, hgroup, figure, figcaption, body, h1, h2, h3, h4, h5, h6, ul, ol, li, form, p, dl, dt, dd, blockquote, legend, table, th, td, fieldset, menu, pre {
+margin: 0;padding: 0;}
+strong, b {font-weight: bold;}
+.tG0, .kl0:hover .kJ0, .kJ0, .pm1 .nui-ico, .kk0, .md0 .nui-ico, .tT0 .nui-tree-item-symbol .nui-ico-rArr, .tT0 .nui-tree-item-symbol .nui-ico-dArr, .ra0, .qE0, .rW2, .rS0, .rq0, .qp0, .hC0, .ga0, .tT0 .nui-tree-item-label-hover, .tT0 .nui-tree-item-label:hover, .tT0 .nui-tree-item-label-selected, .tT0 .nui-tree-item-label-selected:hover, .sJ0, .tA0, .rC0 .nui-ico, .mE0, .kA0, .tA0 .nui-tabs-item-close .nui-ico, .tA0 .nui-ico-compose, .gWel-tabs-panel-ctrl .gWel-ico, .nui-ico-inSkin, .fn-bg {
+-webkit-background-size: auto;background-size: auto;}
+
+.gWel-tabs-panel-ctrl .gWel-ico, .tT0 .nui-tree-item-label-hover, .tT0 .nui-tree-item-label:hover, .tT0 .nui-tree-item-label-selected, .tT0 .nui-tree-item-label-selected:hover, .sJ0, .tA0, .rW2, .tG0, .kl0:hover .kJ0, .kJ0, .pm1 .nui-ico, .kk0, .md0 .nui-ico, .tT0 .nui-tree-item-symbol .nui-ico-rArr, .tT0 .nui-tree-item-symbol .nui-ico-dArr, .ra0, .qE0, .rS0, .rq0, .qp0, .hC0, .ga0, .rC0 .nui-ico, .mE0, .kA0, .tA0 .nui-tabs-item-close .nui-ico, .tA0 .nui-ico-compose, .nui-ico-inSkin, .fn-bg {
+background-image: url("images/b99faab1549f76a53179d4863331f364ba792674.png");background-repeat: no-repeat;}
+
+.gWel-tabs-panel-ctrl .gWel-ico, .tT0 .nui-tree-item-label-hover, .tT0 .nui-tree-item-label:hover, .tT0 .nui-tree-item-label-selected, .tT0 .nui-tree-item-label-selected:hover, .sJ0, .tA0, .rW2, .tG0, .kl0:hover .kJ0, .kJ0, .pm1 .nui-ico, .kk0, .md0 .nui-ico, .tT0 .nui-tree-item-symbol .nui-ico-rArr, .tT0 .nui-tree-item-symbol .nui-ico-dArr, .ra0, .qE0, .rS0, .rq0, .qp0, .hC0, .ga0, .rC0 .nui-ico, .mE0, .kA0, .tA0 .nui-tabs-item-close .nui-ico, .tA0 .nui-ico-compose, .nui-ico-inSkin, .fn-bg {
+background-image: url("images/8f0352f5fce1f0475e91bcec2574527981f25ce1.png");background-repeat: no-repeat;}
+
+.nui-switch, .nui-calendar, .nui-sup, .nui-progress, .nui-normalTips, .nui-tag, .nui-addr-symbol, .nui-addr-email, .nui-addr-name, .nui-addr, .nui-inlineGap, .nui-select, .nui-chk, .nui-ipt, .nui-ico, .nui-btn, .nui-splitBtn-text, .nui-btn-text, .nui-fIBlock {
+display: inline-block;vertical-align: middle;}
+
+.nui-form-item-sub:before, .nui-form-item-sub:after, .nui-form-item:before, .nui-form-item:after, .nui-contacts:before, .nui-contacts:after, .nui-chkGroup:before, .nui-chkGroup:after, .nui-msgbox-iconText:before, .nui-msgbox-iconText:after, .nui-tag:before, .nui-tag:after, .nui-container:before, .nui-container:after, .nui-toolbar:before, .nui-toolbar:after, .nui-tabs:before, .nui-tabs:after, .nui-fClear:before, .nui-fClear:after {
+clear: both;content: ".";font-size: 0;display: block;height: 0;overflow: hidden;visibility: hidden;}
+.nui-form-item-sub:before, .nui-form-item-sub:after, .nui-form-item:before, .nui-form-item:after, .nui-contacts:before, .nui-contacts:after, .nui-chkGroup:before, .nui-chkGroup:after, .nui-msgbox-iconText:before, .nui-msgbox-iconText:after, .nui-tag:before, .nui-tag:after, .nui-container:before, .nui-container:after, .nui-toolbar:before, .nui-toolbar:after, .nui-tabs:before, .nui-tabs:after, .nui-fClear:before, .nui-fClear:after {
+clear: both;content: ".";font-size: 0;display: block;height: 0;overflow: hidden;visibility: hidden;}
+
+
+/*header代码开始*/
+/*header1 start*/
+.frame-head {background-color:#FCEECB; height: 86px;position: relative;z-index: 25;box-shadow: 0 1px 2px 0 RGBA(0,0,0,.3);min-width: 960px;width: 100%;}
+.frame-default .frame-head {position: absolute;left: 0;right: 0;top: 0;width: 100%;}
+.tY0 {position: relative;z-index: 25;}
+.tG0 {cursor: pointer;position: absolute;z-index: 8;left: 12px;top: 12px;}
+.sj0 {background-position: -208px 0;}
+.rP0 {visibility: hidden;}
+.tO0 {z-index: 10;position: absolute;left: 200px;top: 13px;}
+li {display: list-item;text-align: -webkit-match-parent;}
+.pR0 {padding-top: 1px;font-weight: 700;position: relative;z-index: 3;}
+.pR0, .rZ0 {float: left;}
+.nui-txt-link, .nui-txt-cLink a, .nui-txt-cLink, .nui-dateLayer-calendar b {color: #606065!important;}
+.nui-txt-link {outline: 0;cursor: pointer;padding: 2px 4px 4px;text-decoration: none;border-radius: 3px;}
+.kl0 {zoom: 1;line-height: 14px;float: left;position: relative;z-index: 2;}
+.kl0 {color: #535353!important;}
+.hM0 {margin-right: 2px;margin-left: 2px;}
+.kl0 .nui-ico {margin-left: 0px;margin-top: -1px;background-repeat: no-repeat;background-position: 0 -224px;width: 10px;height: 8px;}
+.nui-ico, .nui-txt-fNui {font-family: nui!important;font-size: 12px;font-style: normal;font-weight: 400;line-height: normal!important;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+.nui-ico {font-weight: 400;text-align: center;line-height: normal;overflow: hidden;}
+.nui-ico-unfold, .nui-ico-fold, .nui-ico-angle, .nui-ico-dArr, .nui-ico-uArr, .nui-ico-lArr, .nui-ico-rArr {font-size: 0;line-height: 999px;overflow: hidden;}
+.nui-ico-dArr, .nui-ico-angle, .nui-ico-angle-d, .nui-ico-unfold {width: 7px;height: 6px;}
+.kl0:hover .nui-ico {background-position: -96px -224px;}
+.nui-txt-link:hover, .nui-txt-link-hover, .nui-txt-link:focus, .nui-txt-link-focus, .nui-dateLayer-calendar-focusCell b, .nui-dateLayer-calendar-focusCell b:hover {
+background-color: #606065!important;color: #fff!important;}
+.rZ0 {padding-top: 0;position: relative;z-index: 2;}
+.pn1 {margin: 1px 6px 0;line-height: normal;opacity: .3;filter: alpha(opacity=30);position: relative;z-index: 2;}
+.hj1 {z-index: 3;position: relative;}
+.lP1 {vertical-align: top;line-height: 16px;margin: 0px 4px;width: 53px;height: 22px;position: relative;zoom: 1;top: -2px;visibility: visible;cursor: pointer;background: url("images/loading.gif") no-repeat;}
+.yixinicon{display:block;height:21px;width:31px;padding:1px 0 0 22px;white-space:nowrap;font-size:12px;line-height:21px;background-repeat:no-repeat;background-image:url("images/yixin-ndft.png");background-position:0 0px;}
+.yixinicon span{color: #1abd8c;}
+.sh0 {color: #535353!important;}
+.sU0 {position: absolute;z-index: 7;top: 12px;right: 12px;height: 28px;width: 238px;}
+.ru0 {background-color: #fff;opacity: .5;filter: alpha(opacity=50);border-radius: 28px;position: absolute;width: 100%;height: 28px;left: 0;top: 0;}
+.md0, .kk0 {position: absolute;left: 8px;top: 7px;background-position: -96px -256px;width: 15px;height: 16px;}
+.nui-ipt {-webkit-transition: all .3s;-moz-transition: all .5s;-o-transition: all .5s;transition: all .5s;border-radius: 3px;font-size: 12px;line-height: 1.666;position: relative;zoom: 1;padding: 3px 8px;height: 20px;border: 1px solid #bbb;background: #fff;box-shadow: 1px 1px 2px rgba(0,0,0,.1) inset;}
+.sU0 .nui-ipt {background: 0;border: 0;box-shadow: none;position: absolute;left: 27px;top: 0;padding: 0;margin: 0;top: 6px;height: auto;line-height: 0;font-size: 0;z-index: 3;}
+.nui-ipt-input {font-size: 12px;padding: 0;margin: 0;-margin-top: 1px;border: 0;outline: 0;background: transparent;}
+.md0 {left: auto;z-index: 2;right: 0;top: 0;height: 100%;width: 25px;line-height: 0;opacity: 1;}
+.md0 .nui-ico {width: 12px;height: 9px;background-position: -128px -256px;position: absolute;top: 11px;right: 11px;}
+/*header1 end*/
+
+/*header2 start*/
+.tV0 {height: 34px;position: absolute;bottom: 0;width: 100%;left: 0;z-index: 5;}
+.wo0 {line-height: 0;font-size: 0;height: 34px;overflow: hidden;position: relative;margin-right: 36px;z-index: 2;}
+.sZ0 {position: absolute;left: -800px;}
+.nui-tabs {font-size: 12px;line-height: 1.666;border-bottom: 1px solid #ccc;}
+.nui-tabs-item {float: left;text-align: center;padding: 0 15px;border: solid #ccc;border-width: 1px 1px 0;margin-right: -1px;cursor: pointer;outline: 0;}
+.nui-tabs-item {-webkit-transition-property: width,opacity;-moz-transition-property: width,opacity;-ms-transition-property: width,opacity;-o-transition-property: width,opacity;transition-property: width,opacity;-webkit-transition-duration: .2s;-moz-transition-duration: .2s;-ms-transition-duration: .2s;-o-transition-duration: .2s;transition-duration: .2s;}
+.nui-tabs-item {opacity: 1;}
+.tA0:hover{background-position: -208px -448px;}
+.tz0 {left: 12px;border-width: 0;margin-bottom: 2px;position: absolute;bottom: 0;}
+.tA0 {outline: 0;cursor: pointer;float: left;position: relative;z-index: 3;height: 22px;border-width: 1px 1px 0;border-style: solid;width: 91px;text-align: center;line-height: normal;font-size: 14px;
+	padding: 7px 20px 2px 8px;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;-khtml-user-select: none;user-select: none;margin: 0;border-bottom-width: 0!important;}
+.sJ0, .tA0 {background-repeat: repeat-x;}
+.tA0 {color: #535353;border: 0;}
+.qv0 {border-top-left-radius: 3px;}
+.tA0 {background-position: 0 -448px;}
+.nui-btn, .nui-fNoSelect {-moz-user-select: none;-webkit-user-select: none;-khtml-user-select: none;user-select: none;}
+.tA0 .nui-tabs-item-text {display: block;width: 100%;white-space: nowrap;position: relative;overflow: hidden;line-height: 16px;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;-khtml-user-select: none;user-select: none;}
+.oZ0 .nui-tabs-item-text {margin-left: 6px;}
+.tA0 .nui-tabs-item-text {display: block;width: 100%;white-space: nowrap;position: relative;overflow: hidden;line-height: 16px;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;-khtml-user-select: none;user-select: none;}
+.ua-notIE .tA0 .nui-tabs-item-text, .ua-ie6 .tA0 .nui-tabs-item-text, .ua-ie7 .tA0 .nui-tabs-item-text {text-overflow: ellipsis;-o-text-overflow: ellipsis;}
+.nui-tabs-item-selected{background-color: #fff;}
+.rC0, .rJ0 {border-top-right-radius: 3px;}
+.rC0 {padding: 0!important;font-size: 12px;width: 27px;height: 29px;margin-top: 2px;line-height: 29px;}
+.rC0 .nui-ico {background-position: 0 -256px;position: absolute;top: 13px;left: 9px;width: 8px;height: 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
