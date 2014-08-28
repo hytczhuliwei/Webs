@@ -159,12 +159,6 @@ var allTaobaoPic=new Array('url("images/lm9Right/T1YCKuFateXXXXPav4-200-250.jpg"
 
 
 var timeHandle;
-var html0;	
-var html1;	
-var html2;	
-var html3;	
-var html4;	
-var html5;	
 
 
 function taobaoPicShow(){
