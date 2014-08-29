@@ -276,12 +276,17 @@ margin-top: 4px;}
 .rF0:hover .cT0, .rF0:hover .dK0, .rF0:hover .dS0, .rF0:hover .cC0, .ik0 .dS0 {display: block;}
 .nui-ico-smartTrash-head, .sr1 {-webkit-transform-origin: right bottom;-webkit-transition: -webkit-transform 150ms ease-in-out;-moz-transform-origin: right bottom;-moz-transition: -moz-transform 150ms ease-in-out;-o-transform-origin: right bottom;-o-transition: -o-transform 150ms ease-in-out;-ms-transform-origin: right bottom;-ms-transition: -ms-transform 150ms ease-in-out;transform-origin: right bottom;transition: transform 150ms ease-in-out;}
 .cC0 .nui-ico {margin-top: 8px;}
-.nui-ico-smartTrash-head {position: absolute;top: 0;left: 0;width: 11px;height: 3px;background: url("images/smartTrashheadImg.png") no-repeat;}
+.nui-ico-smartTrash-head {transform-origin: right bottom;position: absolute;top: 0;left: 0;width: 11px;height: 3px;background: url("images/smartTrashheadImg.png") no-repeat;}
 .nui-ico-smartTrash-body {position: absolute;top: 4px;left: 0;width: 11px;height: 9px;background: url("images/smartTrashbodyImg.png") no-repeat;}
+.nui-ico-smartTrash:hover .nui-ico-smartTrash-head{transform:rotateZ(20deg); }
+
+
 .dU0 {position: absolute;left: 234px;top: 0;padding-top: 5px;height: 24px;cursor: pointer;}
 .cC0, .dU0 {top: -8px;}
 .nui-ico-flag-0 {background: url("images/whiteFlag.png") no-repeat;}
-.nui-ico-flags, .nui-ico-flag {width: 11px;height: 12px;margin-top: 12px;}
+.nui-ico-flags, .nui-ico-flag {width: 11px;height: 12px;margin-top: 12px;transform-origin: left bottom;}/*动画相关*/
+.dU0 .nui-ico-flag:hover{animation:1s myflag 1;-webkit-animation:1s myflag 1;-moz-animation:1s myflag 1;-o-animation:1s myflag 1;}
+
 .il0 {position: absolute;top: 0;left: 264px;right: 183px;height: 1.1em;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .gB0, .hV0, .il0, .dP0, .im0, .dS0 {padding-top: 10px;padding-bottom: 10px;}
 .ts1 .il0 {right: 265px;}
@@ -310,6 +315,26 @@ margin-top: 4px;}
 .nui-miniBtn .nui-btn-text {padding: 0;font-size: 0;overflow: hidden;}
 .nui-miniBtn, .nui-miniBtn .nui-btn-text {border-radius: 100%!important;text-align: center;line-height: 21px;width: 21px;height: 21px;}
 
+/*动态相关*/
+.nui-ico-checkbox-checked {background: url('images/checkboxSelected.png') no-repeat scroll 0% 0% transparent;}
+.nui-txt-flag1, .nui-txt-flag1 a {color: #C7284A !important;}
+
+/*标记为 下拉框*/
+.nui-menu {border-radius: 4px;text-align: left;line-height: 25px;padding: 7px 0;white-space: nowrap;position: absolute!important;left: 0;
+top: 0;z-index: 1000;border: 1px solid #bbb;box-shadow: 0 1px 3px rgba(0,0,0,.2);background: #fff;cursor: default;outline: 0;}
+.nui-msgbox, .nui-layer, .nui-mask, .nui-menu, .nui-ani-fadeIn {-webkit-animation: nui-fadeIn .3s;animation: nui-fadeIn .3s;}
+.nui-menu-item, .nui-menu-item-inner, .nui-menu-item-link {color: #555;}
+.nui-menu-item {position: relative;zoom: 1;cursor: pointer;outline: 0;}
+.nui-menu-item-inner, .nui-menu-item-link {display: block;text-decoration: none;padding: 0 30px 0 32px;position: relative;zoom: 1;}
+.nui-menu-item-link {cursor: pointer;}
+.nui-menu-item-icon{position: absolute; left: 8px; top: 8px;}
+
+.nui-split {color: #e0e0e0;clear: both;height: 0;font-size: 0;line-height: 0;overflow: hidden;border-width: 0 0 1px;border-style: solid;}
+.nui-menu-split {margin: 4px 0;border-color: #e9e9e9;}
+.nui-menu-item-icon .nui-ico.nui-ico-flag{margin-top: -2px;}
+
+.nui-menu-item:hover>.nui-menu-item-link, .nui-menu-item:active>.nui-menu-item-link, .nui-menu-item:focus>.nui-menu-item-link, .nui-menu-item-selected .nui-menu-item-link, .nui-menu-item-hover .nui-menu-item-link, .nui-menu-item-active .nui-menu-item-link, .nui-menu-item-focus .nui-menu-item-link, .nui-menu-item-link-hover, .nui-menu-item-link-active, .nui-menu-item-link-focus, .nui-menu-item-link:hover, .nui-menu-item-link:active, .nui-menu-item-link:focus {
+background-color: #E2E9F1;}
 
 
 
@@ -333,6 +358,79 @@ margin-top: 4px;}
 
 
 
+
+
+
+
+
+
+
+
+
+
+@keyframes myflag
+{
+0%   {transform: rotateZ(-10deg);}
+20%  {transform: rotateZ(-20deg);}
+25% {transform: rotateZ(-30deg);}
+30% {transform: rotateZ(-20deg);}
+35% {transform: rotateZ(0deg);}
+40% {transform: rotateZ(-20deg);}
+45% {transform: rotateZ(-25deg);}
+50% {transform: rotateZ(-30deg);}
+60% {transform: rotateZ(-10deg);}
+70% {transform: rotateZ(-20deg);}
+80% {transform: rotateZ(-30deg);}
+100%{transform: rotateZ(0deg);}
+}
+
+@-moz-keyframes myflag /* Firefox */
+{
+0%   {transform: rotateZ(-10deg);}
+20%  {transform: rotateZ(-20deg);}
+25% {transform: rotateZ(-30deg);}
+30% {transform: rotateZ(-20deg);}
+35% {transform: rotateZ(0deg);}
+40% {transform: rotateZ(-20deg);}
+45% {transform: rotateZ(-25deg);}
+50% {transform: rotateZ(-30deg);}
+60% {transform: rotateZ(-10deg);}
+70% {transform: rotateZ(-20deg);}
+80% {transform: rotateZ(-30deg);}
+100%{transform: rotateZ(0deg);}
+}
+
+@-webkit-keyframes myflag /* Safari 和 Chrome */
+{
+0%   {transform: rotateZ(-10deg);}
+20%  {transform: rotateZ(-20deg);}
+25% {transform: rotateZ(-30deg);}
+30% {transform: rotateZ(-20deg);}
+35% {transform: rotateZ(0deg);}
+40% {transform: rotateZ(-20deg);}
+45% {transform: rotateZ(-25deg);}
+50% {transform: rotateZ(-30deg);}
+60% {transform: rotateZ(-10deg);}
+70% {transform: rotateZ(-20deg);}
+80% {transform: rotateZ(-30deg);}
+100%{transform: rotateZ(0deg);}
+}
+
+@-o-keyframes myflag /* Opera */
+{
+0%   {transform: rotateZ(-10deg);}
+20%  {transform: rotateZ(-20deg);}
+25% {transform: rotateZ(-30deg);}
+30% {transform: rotateZ(-20deg);}
+35% {transform: rotateZ(0deg);}
+40% {transform: rotateZ(-20deg);}
+45% {transform: rotateZ(-25deg);}
+50% {transform: rotateZ(-30deg);}
+60% {transform: rotateZ(-10deg);}
+70% {transform: rotateZ(-20deg);}
+80% {transform: rotateZ(-30deg);}
+100%{transform: rotateZ(0deg);}
+}
 
 
 
