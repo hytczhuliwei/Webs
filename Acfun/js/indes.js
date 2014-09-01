@@ -1,4 +1,4 @@
-$(function(){
+﻿$(function(){
 	//button按下时显示效果
 	$(".searchButton").mousedown(function(){
 		 $(this).css({"background-position":"0 -123px"});		
@@ -283,7 +283,7 @@ var timeHandle;
 var timeHandle2;
 
 function randomBiaoqing(){
-	var n=Math.floor(Math.random()*50+4);
+	var n=Math.floor(Math.random()*54);
 	if(n<10){
 		n="0"+n;
 	}
