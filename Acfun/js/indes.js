@@ -86,6 +86,7 @@
 	$("#navLeft .navA").each(function(){
 	    var that = $(this);
 	        that.hoverDelay({
+	        hoverDuring: 400,
             outDuring: 400,
             hoverEvent: function(){
                	var curShowNav=that.find(".channel").attr("class").split("channel ")[1];
@@ -115,7 +116,8 @@
 	$("#navLeft").each(function(){
   		  var that = $(this);
 	        that.hoverDelay({
-            outDuring: 600,
+	        outDuring: 300,
+            outDuring: 300,
             hoverEvent: function(){
 				$("#sub-guideMengban").stop(true,false).slideDown(200);     
             },

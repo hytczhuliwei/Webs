@@ -3,20 +3,11 @@ $(function(){
 	$("#tb-index,#tb-friend,#tb-app,#tb-dress").each(function(){
 	    var that = $(this);
 	    that.hoverDelay({
-            outDuring: 500,
+	    	hoverDuring:500,
+            outDuring: 200,
             hoverEvent: function(){
               that.find(".navdropdown").stop().slideDown(250);
               that.find(".a-link").addClass("current");
-            },
-            outEvent: function(){
-            }
-        });
-	});
-	$("#tb-index,#tb-friend,#tb-app,#tb-dress").each(function(){
-	    var that = $(this);
-	    that.hoverDelay({
-            outDuring: 0,
-            hoverEvent: function(){
             },
             outEvent: function(){
             	that.find(".a-link").removeClass("current");
@@ -28,6 +19,7 @@ $(function(){
 	$("#tb_setting_li").each(function(){
 	    var that = $(this);
 	    that.hoverDelay({
+	    	hoverDuring:200,
             outDuring: 100,
             hoverEvent: function(){
               that.find(".user-drop-down").stop().slideDown(250);
@@ -44,6 +36,7 @@ $(function(){
 	$("#tb_vip_li").each(function(){
 	    var that = $(this);
 	    that.hoverDelay({
+	    	hoverDuring:100,
             outDuring: 0,
             hoverEvent: function(){
             	that.find(".vip-drop-down").stop().slideDown(250);

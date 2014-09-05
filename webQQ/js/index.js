@@ -1,4 +1,4 @@
-$(function(){
+﻿$(function(){
 	//换背景
 	$(".changBgFre").click(function(){
 		picNum--;
@@ -12,7 +12,7 @@ $(function(){
 		if(picNum>8){
 			picNum=1;
 		}
-		$(".bgAllImage").attr("src",'css/image/'+picNum+'.jpg');
+		$(".bgAllImage").attr("src",'css/image/0'+picNum+'.jpg');
 	});
 
 
