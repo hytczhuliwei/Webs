@@ -1,0 +1,84 @@
+body{font-family:"Microsoft YaHei","微软雅黑",Arial; color: #333;}
+*{margin: 0;padding: 0;}
+input{outline: none;}
+a{text-decoration: none; cursor: pointer;}
+::-webkit-input-placeholder { font-weight: 600;}
+
+/*header 开始*/
+.bg{background-image: url("images/bg.jpg"); background-size: cover; background-repeat: no-repeat;z-index: -10; position: fixed; top: 0; left: 0;right: 0;bottom: 0;}
+.header{width: 100%; height: 40px; margin-bottom: 10px; position: fixed;top: 0; background-color: #16a085; }
+.header .headerWrapper{width: 1000px; height: 40px; margin: auto}
+.headerWrapper .headerlogo{width: 105px; height: 40px; margin-right: 36px; padding: 6px 0 0 0; float: left;}
+.icon{background-image: url("images/10years-icons.png"); background-repeat: no-repeat; display: inline-block;}
+.headerlogoImg{width: 29px; height: 29px; background-position: 0 -719px; float: left;}
+.headerlogoWord{width: 76px; height: 26px; background-position: -30px -720px; float: left;}
+.headerNav{width: 60px; height: 14px; float: left; padding: 13px 18px; cursor: pointer;}
+.headerNav:hover{background-color: #06755f;}
+.headerNav span{color: #fff; font-weight: 700; font-size: 14px; line-height: 14px; text-align: center; }
+.headerNavSpecial{width: 32px; position: relative;}
+.wendaoImg{position: absolute;background-position: -151px -740px;width: 18px;height: 14px;top: 3px; right: 5px;}
+.right{float: right;}
+/*header 结束*/
+
+
+/*主体部分 开始*/
+.mainWrapper{ padding: 40px 0 0 0; margin-top: 70px;}
+.mainContent{width: 100%; height: 310px; position: relative;}
+.mainContentBg{position:absolute;top: 0;left: 0;bottom: 0; right: 0;z-index:-3;  background-color: #000; opacity: 0.3; filter:alpha(opacity=30);}
+.mainContentWrapper{width: 940px; height:240px;  margin: auto; padding:30px;}
+.mainContentWrapperLeft{width: 380px; height: 240px; padding: 0 90px 0 0;float: left;}
+.mainContentWrapperRight{width: 330px; height: 210px; float: left; padding: 30px 140px 0 0;}
+.mainContentWrapperLeft h1{font-size: 20px; color:#fff; margin: 25px 0 15px 0; font-weight: 700;}
+.mainContentWrapperLeft h2{font-size: 16px; color:#e1e1e1; margin: 0px 0 10px 0; font-weight: normal; line-height: 26px;}
+.mcwLeftNav{width: 380px; height:47px;padding: 12px 0 0 0;}
+.mcwLeftNavBtn{width: 96px; height:16px;color: #fff; display: block; float: left;font-size: 16px;padding: 9px 12px; font-weight: normal; text-align: center; border-radius: 5px; font-weight: 700; background-color:#49c612; }
+.mcwLeftNavBtn:hover{background-color: #5fd82a;}
+.mcwLeftNav span{width: 32px; height:16px;padding: 9px 15px;display: block; float: left; font-size: 16px; color: #fff;}
+.mcwLeftNavTiaoIcon{background-position: -214px -524px;width: 45px;height: 35px;position: relative;top: 15px;}
+.mcwLeftSearch{width: 240px; height: 36px; border-radius: 16px; margin-top: 10px;position: relative; background-color: #fff;opacity: 0.3;filter:alpha(opacity=30);padding: 0 20px;}
+.mcwLeftSearchInput{width: 230px;height: 36px; font-size: 16px; border: 0;}
+
+.mcwLeftSearch:hover{opacity: 1;filter:alpha(opacity=100);}
+.mcwLeftSearchIcon{background-position: 0 -15px;width: 16px ;height: 16px; position: absolute;top: 10px; right:10px;cursor: pointer; }
+
+/*登录部分 开始*/
+.loginForm{width: 330px; height: 240px;}
+.loginForm input{width: 330px; height: 48px; margin:8px 0;border: 0;font-size: 16px; font-family:"Microsoft YaHei","微软雅黑",Arial;background-color: #fff; border-radius: 3px; padding: 6px 12px;}
+.loginForm input[type="submit"]{ background-color: #06c3e3; color: #fff; text-align: center;cursor: pointer; font-weight: 600; font-size: 20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
