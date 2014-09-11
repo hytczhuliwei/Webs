@@ -51,41 +51,131 @@
 			</div>
 		</div>
 	</div>
-	<div class="mainWrapper">
-		<div class="mainContent">
-			<div class="mainContentBg"></div>
-			<div class="mainContentWrapper">
-				<div class="mainContentWrapperLeft">
-					<h1>十年后，你会成为怎样的人？</h1>
-					<h2>「十年后」是一个关于未来的匿名社交网络。在这里，你可以自由地分享关于未来与梦想的真实想法，并探索其他人的梦想，以及背后的故事。</h2>
-					<div class="mcwLeftNav">
-						<a class="mcwLeftNavBtn">进站探索一下</a>
-						<span>或者</span>
-						<i class="icon mcwLeftNavTiaoIcon"></i>
+	<div class="mainBody">
+		<div class="mainWrapper">
+			<div class="mainContent">
+				<div class="mainContentBg"></div>
+				<div class="mainContentWrapper">
+					<div class="mainContentWrapperLeft">
+						<h1>十年后，你会成为怎样的人？</h1>
+						<h2>「十年后」是一个关于未来的匿名社交网络。在这里，你可以自由地分享关于未来与梦想的真实想法，并探索其他人的梦想，以及背后的故事。</h2>
+						<div class="mcwLeftNav">
+							<a class="mcwLeftNavBtn">进站探索一下</a>
+							<span>或者</span>
+							<i class="icon mcwLeftNavTiaoIcon"></i>
+						</div>
+						<div class="mcwLeftSearch">
+							<input type="text" class="mcwLeftSearchInput" placeHolder="搜索你的梦想">
+							<i class="icon mcwLeftSearchIcon"></i>
+						</div>
 					</div>
-					<div class="mcwLeftSearch">
-						<input type="text" class="mcwLeftSearchInput" placeHolder="搜索你的梦想">
-						<i class="icon mcwLeftSearchIcon"></i>
+					<div class="mainContentWrapperRight">
+						<form action="login.php" method="POST" class="loginForm">
+							<input name="userid" type="text" autocomplete="off" placeholder="请输入ID">
+							<input name="userpwd" type="text" autocomplete="off" placeholder="请输入密码">
+							<div class="loginOptions">
+								<div class="loginOptionsLeft">
+									<div class="loginOptionsLeftBox"></div>
+									<span class="loginOptionsLeftLabel">下次自动登录</span>
+								</div>
+								<span class="loginOptionsRight loginOptionsNavLabel">忘记密码?</span>
+							</div>
+							<input type="submit" value="登录">
+							<span class="loginFormBottom loginOptionsNavLabel">立即注册>></span>
+						</form>
 					</div>
 				</div>
-				<div class="mainContentWrapperRight">
-					<form action="login.php" method="POST" class="loginForm">
-						<input name="userid" type="text" autocomplete="off" placeholder="请输入ID">
-						<input name="userpwd" type="text" autocomplete="off" placeholder="请输入密码">
-						<div class="loginOptions">
-							<div class="loginOptionsLeft">
-								<div class="loginOptionsLeftBox"></div>
-								<span class="loginOptionsLeftLabel">下次自动登录</span>
-							</div>
-							<span class="loginOptionsRight loginOptionsNavLabel">忘记密码?</span>
+			</div>
+			<div class="mainContent">
+				<div class="mainContentBg"></div>
+				<div class="mainContentWrapper">
+					<div class="mainContentWrapperLeft">
+						<h1>十年后，你会成为怎样的人？</h1>
+						<h2>「十年后」是一个关于未来的匿名社交网络。在这里，你可以自由地分享关于未来与梦想的真实想法，并探索其他人的梦想，以及背后的故事。</h2>
+						<div class="mcwLeftNav">
+							<a class="mcwLeftNavBtn">进站探索一下</a>
+							<span>或者</span>
+							<i class="icon mcwLeftNavTiaoIcon"></i>
 						</div>
-						<input type="submit" value="登录">
-						<span class="loginFormBottom loginOptionsNavLabel">立即注册>></span>
-					</form>
+						<div class="mcwLeftSearch">
+							<input type="text" class="mcwLeftSearchInput" placeHolder="搜索你的梦想">
+							<i class="icon mcwLeftSearchIcon"></i>
+						</div>
+					</div>
+					<div class="mainContentWrapperRight">
+						<form action="login.php" method="POST" class="loginForm">
+							<input name="userid" type="text" autocomplete="off" placeholder="请输入ID">
+							<input name="userpwd" type="text" autocomplete="off" placeholder="请输入密码">
+							<div class="loginOptions">
+								<div class="loginOptionsLeft">
+									<div class="loginOptionsLeftBox"></div>
+									<span class="loginOptionsLeftLabel">下次自动登录</span>
+								</div>
+								<span class="loginOptionsRight loginOptionsNavLabel">忘记密码?</span>
+							</div>
+							<input type="submit" value="登录">
+							<span class="loginFormBottom loginOptionsNavLabel">立即注册>></span>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="mainContent">
+				<div class="mainContentBg"></div>
+				<div class="mainContentWrapper">
+					<div class="mainContentWrapperLeft">
+						<h1>十年后，你会成为怎样的人？</h1>
+						<h2>「十年后」是一个关于未来的匿名社交网络。在这里，你可以自由地分享关于未来与梦想的真实想法，并探索其他人的梦想，以及背后的故事。</h2>
+						<div class="mcwLeftNav">
+							<a class="mcwLeftNavBtn">进站探索一下</a>
+							<span>或者</span>
+							<i class="icon mcwLeftNavTiaoIcon"></i>
+						</div>
+						<div class="mcwLeftSearch">
+							<input type="text" class="mcwLeftSearchInput" placeHolder="搜索你的梦想">
+							<i class="icon mcwLeftSearchIcon"></i>
+						</div>
+					</div>
+					<div class="mainContentWrapperRight">
+						<form action="login.php" method="POST" class="loginForm">
+							<input name="userid" type="text" autocomplete="off" placeholder="请输入ID">
+							<input name="userpwd" type="text" autocomplete="off" placeholder="请输入密码">
+							<div class="loginOptions">
+								<div class="loginOptionsLeft">
+									<div class="loginOptionsLeftBox"></div>
+									<span class="loginOptionsLeftLabel">下次自动登录</span>
+								</div>
+								<span class="loginOptionsRight loginOptionsNavLabel">忘记密码?</span>
+							</div>
+							<input type="submit" value="登录">
+							<span class="loginFormBottom loginOptionsNavLabel">立即注册>></span>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mainBodyNavigation">
+			<div class="navbackground">
+				<div class="navtimeline"></div>
+				<div class="icon navtimelineBar"></div>
+			</div>
+			<div class="navWrapper">
+				<div class="navTimeBeside">
+					<div class="navTimeBottom">
+						<div class="navTimeBottomTop"></div>
+					</div>
+				</div>
+				<div class="navTimeMiddle">
+					<div class="navTimeBottom">
+						<div class="navTimeBottomTop"></div>
+					</div>
+				</div>
+				<div class="navTimeBeside">
+					<div class="navTimeBottom">
+						<div class="navTimeBottomTop"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
 </body>
 </html>

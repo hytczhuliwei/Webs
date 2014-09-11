@@ -6,4 +6,16 @@ $(function(){
 			$(this).find(".loginOptionsLeftBox").addClass("loginOptionsLeftBoxSelected");
 		}
 	});
+	$(".mcwLeftSearchInput").focus(function(){
+		$(this).parent().css({
+			"opacity":"1",
+			"filter":"alpha(opacity=100)"
+		});
+	});
+	$(".mcwLeftSearchInput").blur(function(){
+		$(this).parent().css({
+			"opacity":"0.3",
+			"filter":"alpha(opacity=30)"
+		});
+	});
 });
