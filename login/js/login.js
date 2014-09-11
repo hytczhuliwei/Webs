@@ -1,0 +1,9 @@
+$(function(){
+	$(".loginOptionsLeft").click(function(){
+		if($(this).find(".loginOptionsLeftBox").attr("class")!="loginOptionsLeftBox"){
+			$(this).find(".loginOptionsLeftBox").removeClass("loginOptionsLeftBoxSelected");
+		}else{
+			$(this).find(".loginOptionsLeftBox").addClass("loginOptionsLeftBoxSelected");
+		}
+	});
+});

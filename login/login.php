@@ -27,6 +27,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/login.css"> 
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
 	<title>登录</title>
 </head>
 <body>
@@ -70,7 +72,15 @@
 					<form action="login.php" method="POST" class="loginForm">
 						<input name="userid" type="text" autocomplete="off" placeholder="请输入ID">
 						<input name="userpwd" type="text" autocomplete="off" placeholder="请输入密码">
+						<div class="loginOptions">
+							<div class="loginOptionsLeft">
+								<div class="loginOptionsLeftBox"></div>
+								<span class="loginOptionsLeftLabel">下次自动登录</span>
+							</div>
+							<span class="loginOptionsRight loginOptionsNavLabel">忘记密码?</span>
+						</div>
 						<input type="submit" value="登录">
+						<span class="loginFormBottom loginOptionsNavLabel">立即注册>></span>
 					</form>
 				</div>
 			</div>
